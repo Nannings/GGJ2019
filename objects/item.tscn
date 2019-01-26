@@ -13,7 +13,7 @@ radius = 30.0
 custom_solver_bias = 0.0
 radius = 70.7107
 
-[node name="item" type="StaticBody2D" index="0" groups=[
+[node name="item" type="StaticBody2D" groups=[
 "items",
 ]]
 

@@ -14,9 +14,11 @@ position = Vector2( 516.628, 277.25 )
 
 [node name="item2" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 433.044, 236.879 )
+position = Vector2( 357.234, 227.854 )
 
-[node name="player" parent="." index="2" instance=ExtResource( 3 )]
+[node name="player" parent="." index="2" groups=[
+"players",
+] instance=ExtResource( 3 )]
 
 position = Vector2( 455.216, 446.172 )
 
