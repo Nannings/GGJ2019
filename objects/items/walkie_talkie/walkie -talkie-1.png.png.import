@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walkie -talkie-1.png.png-34de6c54f6f4f59ae6d940b0847ed1e1.stex"
+path="res://.import/walkie -talkie-1.png.png-678f81808eed154e8fbab09cbdc7118d.stex"
 
 [deps]
 
-source_file="res://objects/items/walkie -talkie-1.png.png"
-dest_files=[ "res://.import/walkie -talkie-1.png.png-34de6c54f6f4f59ae6d940b0847ed1e1.stex" ]
+source_file="res://objects/items/walkie_talkie/walkie -talkie-1.png.png"
+dest_files=[ "res://.import/walkie -talkie-1.png.png-678f81808eed154e8fbab09cbdc7118d.stex" ]
 
 [params]
 
