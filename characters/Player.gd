@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 onready var dBox = preload("res://UI/dialogueBox.tscn")
 onready var sprite = $sprite 
+onready var animations = sprite.get_node("animations")
+
 
 var direction = Vector2()
 var movement = Vector2()
@@ -14,7 +16,6 @@ func _ready():
 
 func _physics_process(delta):
 	direction = Vector2(0,0)
-	
 	action()
 	walk()
 	
@@ -25,19 +26,36 @@ func _physics_process(delta):
 #				pass
 #				print(collider.name)
 
+	print(direction)
 
 	movement = speed * direction * delta
 	move_and_slide(movement, Vector2(0,0))
 	
 func walk():
-	if Input.is_action_pressed("up"):
-	            direction += Global.DIRECTIONS.up;
-	elif Input.is_action_pressed("down"):
-	            direction += Global.DIRECTIONS.down;
-	if Input.is_action_pressed("right"):
-	            direction += Global.DIRECTIONS.right;
-	elif Input.is_action_pressed("left"):
-	            direction += Global.DIRECTIONS.left;
+	if Input.is_action_pressed("up") || Input.is_action_pressed("down") || Input.is_action_pressed("left") || Input.is_action_pressed("right"):
+		if Input.is_action_pressed("up"):
+			direction += Global.DIRECTIONS.up;
+			print(direction)
+			if (!animations.current_animation == "walking_up" && !animations.current_animation == "walking_right" && !animations.current_animation == "walking_left"):
+				animations.play("walking_up")
+				
+		elif Input.is_action_pressed("down"):
+			direction += Global.DIRECTIONS.down;
+			if (!animations.current_animation == "walking_down" && !animations.current_animation == "walking_right" && !animations.current_animation == "walking_left"):
+				animations.play("walking_down")
+				
+		if Input.is_action_pressed("right"):
+			direction += Global.DIRECTIONS.right;
+			if (!animations.current_animation == "walking_right"):
+				animations.play("walking_right")
+				
+		elif Input.is_action_pressed("left"):
+			direction += Global.DIRECTIONS.left;
+			if (!animations.current_animation == "walking_left"):
+				animations.play("walking_left")
+	else:
+		animations.stop()
+		
 func action():
 	pass
 		

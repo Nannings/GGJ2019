@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/dialogueBox.gd" type="Script" id=1]
 
-[node name="dialogueBox" type="Control" index="0"]
+[node name="dialogueBox" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 1.0
