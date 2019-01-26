@@ -1,26 +1,26 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/Support.gd" type="Script" id=1]
-[ext_resource path="res://placeholders/PNG/Characters/platformChar_idle.png" type="Texture" id=2]
+[ext_resource path="res://characters/daughter.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 25.7215, 25.6409 )
+extents = Vector2( 90.9991, 97.9004 )
 
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 67.8742
+radius = 235.139
 
-[node name="support" type="KinematicBody2D"]
+[node name="daugther" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-sceneScriptName = "sceneScript"
+sceneScriptName = "sceneDaughterIntro"
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
