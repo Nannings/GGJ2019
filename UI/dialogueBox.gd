@@ -53,9 +53,7 @@ func nextPage():
 					rtl.set_bbcode(dialogue[page])
 					speakerLabel.set_text(speaker[page])
 					rtl.set_visible_characters(0)
-					speakerLabel.set_visible_characters(0)
-					
-					print(choices[page])
+					rtl.get_total_character_count()
 					#for c in choices[page].values():
 						#print(c)
 						
@@ -66,8 +64,8 @@ func nextPage():
 					queue_free()
 					
 			else:
+				print(rtl.get_total_character_count())
 				rtl.set_visible_characters(rtl.get_total_character_count())
-				speakerLabel.set_visible_characters(speakerLabel.get_total_character_count())
 			
 			if rtl.get_visible_characters() <= 0:
 				beginPage = true
