@@ -5,15 +5,24 @@ onready var sprite = $sprite
 onready var animations = sprite.get_node("animations")
 onready var flashLight = get_node("flashLight")
 
+export (float) var battery = 1
+
 
 var direction = Vector2()
 var movement = Vector2()
 var speed = 8000
 var facing = Vector2(0,-1)
 var talking = false
+var flashLightSprite 
+var lightDecrease = 10 #less is faster
 
 func _ready():
+	flashLightSprite = flashLight.get_node("flashLightSprite")
 	pass
+
+func _process(delta):
+	battery -= delta / lightDecrease
+	flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
 
 func _physics_process(delta):
 	direction = Vector2(0,0)
@@ -93,3 +102,29 @@ func talk(sceneScript):
 
 #lower speed by 5% for 1 kg
 
+func hsv_lerp(cola, colb, t):
+    #This part will flip the direction of the lerp if the two colors are above
+    #180 degrees apart, this way the lerp always takes the shortest path.
+    var h
+    var ha = cola.h
+    var hb = colb.h
+    var d = hb - ha
+    if ha <= hb:
+        if d > 0.5:
+            h = fmod(lerp(ha + 1, hb, t), 1)
+        else:
+            h = lerp(ha, hb, t)
+    else:
+        d = -d
+        if d > 0.5:
+            h = fmod(lerp(ha, hb + 1, t), 1)
+        else:
+            h = lerp(ha, hb, t)
+
+    #Setting the color
+    var newcol = Color()
+    newcol.v = lerp(cola.v, colb.v, t)
+    newcol.s = lerp(cola.s, colb.s, t)
+    newcol.h = h
+
+    return newcol
