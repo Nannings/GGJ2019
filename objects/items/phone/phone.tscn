@@ -1,19 +1,19 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://objects/items/childhood_toy/childhood toy-1.png.png" type="Texture" id=1]
+[ext_resource path="res://objects/items/phone/phone-1.png.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 177.029
+radius = 160.561
 
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 339.383
+radius = 344.588
 
-[node name="childhood_toy" type="StaticBody2D" index="0" groups=[
+[node name="item" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -45,7 +45,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
-itemName = "childToy"
+itemName = "phone"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 

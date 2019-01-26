@@ -9,8 +9,8 @@
         "description": "You can use these to gain a little health.",
         "slowdown": 2
     },
-    "picAlbum": {
-        "pickup": "A photoalbum, it contains pictures of you and your family. It means a lot to you.",
+    "picLovedOne": {
+        "pickup": "A picture of you and your family. It means a lot to you.",
         "description": "You keep the memory of your family and your home with you.",
         "slowdown": 10
     },
@@ -90,7 +90,7 @@
         "slowdown": 5
     },
     "knife": {
-        "pickup": "It's a dangerous looking knife. Maybe I can use this to scare of enemies or defend myself",
+        "pickup": "It's a dangerous looking knife. Maybe you can use this to scare of enemies or defend yourself",
         "description": "It's a knife.",
         "slowdown": 2
     },
@@ -100,13 +100,33 @@
         "slowdown": 0
     },
     "slimjim": {
-        "pickup": "It's a slimjim. I can use this to 'open' a cardoor.",
+        "pickup": "It's a slimjim. You can use this to 'open' a cardoor.",
         "description": "A slimjim. Use it to 'open' a cardoor.",
         "slowdown": 2
     },
     "bagpack": {
-        "pickup": "It's my bagpack. It can hold everything I need to take with me.",
+        "pickup": "It's your bagpack. It can hold everything you need to take with me.",
         "description": "It's my bagpack.",
         "slowdown": 0
+    },
+    "handcuffs": {
+        "pickup": "These are police-issued handcuffs. They don't break easily. They may be usefull later on.",
+        "description": "A set of police-issued handcuffs.",
+        "slowdown": 2
+    },
+    "flashlight": {
+        "pickup": "A simple, yet sturdy flashlight. It can light up dark areas. Runs on batteries.",
+        "description": "A flashlight.",
+        "slowdown": 2
+    },
+    "souvenir": {
+        "pickup": "It's a cheap, ugly souvenir from the airport. Yet it also reminds you of home.",
+        "description": "A souvenir.",
+        "slowdown": 2
+    },
+    "stolenRing": {
+        "pickup": "It's a gold ring. It appears to be stolen",
+        "description": "A stolen ring.",
+        "slowdown": 2
     },
 }
