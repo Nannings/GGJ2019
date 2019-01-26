@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/dialogueBox.gd" type="Script" id=1]
 
-[node name="dialogueBox" type="Control"]
+[node name="dialogueBox" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 1.0
@@ -109,5 +109,14 @@ process_mode = 1
 wait_time = 0.05
 one_shot = false
 autostart = false
+
+[node name="talklessFrames" type="Timer" parent="." index="3"]
+
+process_mode = 0
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="talklessFrames" to="." method="_on_talklessFrames_timeout" flags=3]
 
 

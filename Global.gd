@@ -16,6 +16,21 @@ var scene
 var level = 1
 var screen = 1
 
+var values = {
+	day = 1,
+	money = 0,
+	player = {
+		hp = 3,
+		speed = 300,
+		shootrate = 0.8,
+		shotpower = 1
+	},
+	inv = {
+		space = ["empty","empty","empty","empty","empty","empty","empty","empty"],
+		counts = [0,0,0,0,0,0,0,0]
+	}
+}
+
 func _ready():
 	root = get_tree().get_root()
 	scene = root.get_child( root.get_child_count() -1 )

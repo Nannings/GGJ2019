@@ -27,8 +27,6 @@ func _physics_process(delta):
 #				pass
 #				print(collider.name)
 
-	print(direction)
-
 	movement = speed * direction * delta
 	move_and_slide(movement, Vector2(0,0))
 	
@@ -93,5 +91,5 @@ func talk(sceneScript):
 				dBoxI.ini(speaker, dialogue, choice)
 				get_tree().get_root().add_child(dBoxI)
 
-		
+#lower speed by 5% for 1 kg
 

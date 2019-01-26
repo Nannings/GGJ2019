@@ -19,6 +19,11 @@ config/icon="res://icon.png"
 Global="*res://Global.gd"
 BGmusic="*res://sounds/BGmusic.gd"
 
+[display]
+
+window/size/width=1080
+window/size/height=920
+
 [importer_defaults]
 
 wav={
@@ -65,4 +70,5 @@ accept=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":""
 
 [rendering]
 
+environment/default_clear_color=Color( 0.078125, 0.078125, 0.078125, 1 )
 environment/default_environment="res://default_env.tres"
