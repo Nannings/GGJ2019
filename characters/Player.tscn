@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://characters/Player.gd" type="Script" id=1]
 [ext_resource path="res://characters/MC_Spritesheet.png" type="Texture" id=2]
@@ -102,12 +102,7 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.2304, 27.5572 )
-
-[sub_resource type="CircleShape2D" id=7]
-
-custom_solver_bias = 0.0
-radius = 10.0
+extents = Vector2( 51.7818, 119.878 )
 
 [node name="player" type="KinematicBody2D" groups=[
 "players",
@@ -126,7 +121,7 @@ battery = 1
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 0, 960, 320, 320 )
+region_rect = Rect2( 0, 0, 320, 320 )
 region_filter_clip = true
 _sections_unfolded = [ "Region", "Transform", "Z Index" ]
 
@@ -149,27 +144,7 @@ _sections_unfolded = [ "Playback Options" ]
 
 shape = SubResource( 6 )
 
-[node name="Area2D" type="Area2D" parent="." index="2"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-
-shape = SubResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="flashLight" type="Node2D" parent="." index="3"]
+[node name="flashLight" type="Node2D" parent="." index="2"]
 
 _sections_unfolded = [ "Transform" ]
 __meta__ = {

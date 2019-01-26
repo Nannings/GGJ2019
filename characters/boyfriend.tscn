@@ -11,7 +11,7 @@ extents = Vector2( 90.9991, 97.9004 )
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 235.139
+radius = 261.983
 
 [node name="boyfriend" type="KinematicBody2D"]
 

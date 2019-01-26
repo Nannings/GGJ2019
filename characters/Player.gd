@@ -7,6 +7,7 @@ onready var flashLight = get_node("flashLight")
 
 export (float) var battery = 1
 
+signal dialogueDone
 
 var direction = Vector2()
 var movement = Vector2()
@@ -78,7 +79,7 @@ func pickup(itemName, item):
 				item.get_owner().queue_free()
 				var dBoxI = dBox.instance()
 				print(Global.ITEMS[key].pickup)
-				dBoxI.ini([],[Global.ITEMS[key].pickup], [])
+				dBoxI.ini([],[Global.ITEMS[key].pickup], [], self)
 				get_tree().get_root().add_child(dBoxI)
 	  
 		
@@ -97,7 +98,7 @@ func talk(sceneScript):
 						choice.append(c)
 				var dBoxI = dBox.instance()
 	
-				dBoxI.ini(speaker, dialogue, choice)
+				dBoxI.ini(speaker, dialogue, choice, self)
 				get_tree().get_root().add_child(dBoxI)
 
 #lower speed by 5% for 1 kg
