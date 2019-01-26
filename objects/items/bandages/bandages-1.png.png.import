@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coat-1.png.png-ccf2240a28cee606fa5511c311f46913.stex"
+path="res://.import/bandages-1.png.png-b6b00b9b24e9832e9c35a843fe05bfbf.stex"
 
 [deps]
 
-source_file="res://objects/items/coat-1.png.png"
-dest_files=[ "res://.import/coat-1.png.png-ccf2240a28cee606fa5511c311f46913.stex" ]
+source_file="res://objects/items/bandages/bandages-1.png.png"
+dest_files=[ "res://.import/bandages-1.png.png-b6b00b9b24e9832e9c35a843fe05bfbf.stex" ]
 
 [params]
 

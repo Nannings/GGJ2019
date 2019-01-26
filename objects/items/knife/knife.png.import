@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duct-tape-1.png.png-bbba36530313b3b712a57341ff4c94e5.stex"
+path="res://.import/knife.png-2480987f59cd34f23cb1a7b75b5794d7.stex"
 
 [deps]
 
-source_file="res://objects/items/duct-tape-1.png.png"
-dest_files=[ "res://.import/duct-tape-1.png.png-bbba36530313b3b712a57341ff4c94e5.stex" ]
+source_file="res://objects/items/knife/knife.png"
+dest_files=[ "res://.import/knife.png-2480987f59cd34f23cb1a7b75b5794d7.stex" ]
 
 [params]
 

@@ -68,5 +68,45 @@
         "pickup": "It's your favorite book. You've read it a thousand times and still can't get enough of it. It means a lot to you.",
         "description": "It's your alltime favorite book.",
         "slowdown": 10
-    }
+    },
+    "coat": {
+        "pickup": "It's a coat. It will protect you from the cold or the rain",
+        "description": "It's a coat, it keeps you warm.",
+        "slowdown": 5
+    },
+    "ductTape": {
+        "pickup": "It's a roll of ducttape. You can use it to bind things together. It may be usefull later on.",
+        "description": "It's a roll of ducttape. You can use it to bind things together.",
+        "slowdown": 2
+    },
+    "gasmask": {
+        "pickup": "It's a gasmask. It will protect you from harmfull gasses. It may be usefull later on.",
+        "description": "It's a gasmask. It will protect you from harmfull gasses.",
+        "slowdown": 5
+    },
+    "crowbar": {
+        "pickup": "It's a crowbar. Very usefull for breaking open doors. It may be usefull later on.",
+        "description": "It's a crowbar. It can break open certain doors.",
+        "slowdown": 5
+    },
+    "knife": {
+        "pickup": "It's a dangerous looking knife. Maybe I can use this to scare of enemies or defend myself",
+        "description": "It's a knife.",
+        "slowdown": 2
+    },
+    "paperCutout": {
+        "pickup": "It seems to be a cutout article from a newspaper. The article seems to be about a disappeared woman.",
+        "description": "It seems to be a cutout article from a newspaper.",
+        "slowdown": 0
+    },
+    "slimjim": {
+        "pickup": "It's a slimjim. I can use this to 'open' a cardoor.",
+        "description": "A slimjim. Use it to 'open' a cardoor.",
+        "slowdown": 2
+    },
+    "bagpack": {
+        "pickup": "It's my bagpack. It can hold everything I need to take with me.",
+        "description": "It's my bagpack.",
+        "slowdown": 0
+    },
 }

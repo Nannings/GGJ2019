@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pet-1.png.png-eaa547850e4e5d873cd41c5a612de469.stex"
+path="res://.import/childhood toy-1.png.png-a85d2e9274384a05ff6324d20c8ab473.stex"
 
 [deps]
 
-source_file="res://objects/items/Pet-1.png.png"
-dest_files=[ "res://.import/Pet-1.png.png-eaa547850e4e5d873cd41c5a612de469.stex" ]
+source_file="res://objects/items/childhood_toy/childhood toy-1.png.png"
+dest_files=[ "res://.import/childhood toy-1.png.png-a85d2e9274384a05ff6324d20c8ab473.stex" ]
 
 [params]
 
