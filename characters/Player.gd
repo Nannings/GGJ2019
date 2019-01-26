@@ -91,11 +91,13 @@ func talk(sceneScript):
 				var speaker = []
 				var dialogue = []
 				var choice = []
+#				var voices = []
 				for sent in Global.TALKS[key]:
 					speaker.append(Global.TALKS[key][sent].speaker)
 					dialogue.append(Global.TALKS[key][sent].text)
 					for c in  Global.TALKS[key][sent].choice:
 						choice.append(c)
+#					voices.append(Global.TALKS[key][sent].voice)
 				var dBoxI = dBox.instance()
 	
 				dBoxI.ini(speaker, dialogue, choice, self)
