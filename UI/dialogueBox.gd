@@ -11,12 +11,12 @@ onready var speakerLabel = $speakerPanel.get_node("speaker")
 onready var timer = get_node("timeBetweenLetters")
 onready var talklF = get_node("talklessFrames")
 onready var rtl = $panel.get_node("rtl")
-
-
+onready var audio = get_node("AudioStreamPlayer2D")
 
 var speaker = []
 var dialogue = []
 var choices = []
+var voices = []
 var page = 0
 var choiceTime = false
 var event
@@ -26,6 +26,7 @@ func ini(speakerData, dialogueData, choiceData):
 	speaker = speakerData
 	dialogue = dialogueData
 	choices = choiceData
+#	voices = voiceData
 
 func _ready():
 	connect("dialogueDone", player, "doneTalking")
@@ -70,6 +71,10 @@ func nextPage():
 					visible = false
 					
 			else:
+#				audio.stop()
+#				if voices[page] != "none":
+#					play_voice(voices[page])
+
 				rtl.set_visible_characters(rtl.get_total_character_count())
 			
 			if rtl.get_visible_characters() <= 0:
@@ -103,6 +108,15 @@ func reset():
 	dialogue = []
 	page = 0
 	choiceTime = false
+
+func play_voice(name):
+	var file = File.new()
+	var path = "res://voices/" + name + ".wav"
+	if file.file_exists(path):
+		audio.stream = load(path)
+		audio.play()
+		pass
+
 
 
 func _on_talklessFrames_timeout():
