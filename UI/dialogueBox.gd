@@ -4,7 +4,7 @@ signal choiceEvent(title)
 signal scenarioEnd
 
 #onready var choice = preload("res://scenes/objects/choicesbox.tscn")
-onready var speakerLabel = get_node("speaker")
+onready var speakerLabel = $speakerPanel.get_node("speaker")
 onready var timer = get_node("timeBetweenLetters")
 onready var rtl = $panel.get_node("rtl")
 
@@ -14,6 +14,7 @@ var dialogue = []
 var page = 0
 var choiceTime = false
 var event
+var beginPage 
 
 func ini(speakerData,dialogueData):
 	speaker = speakerData
@@ -24,6 +25,8 @@ func _ready():
 	if speaker != []:
 		speakerLabel.set_text(speaker[page])
 	rtl.set_visible_characters(0)
+	beginPage = true
+	print(speaker)
 	print(dialogue)
 
 func _input(e):
@@ -39,20 +42,20 @@ func nextPage():
 	set("visibility/visible",true)
 	
 	if event != null:
-		event = null
-		if rtl.get_visible_characters() >= rtl.get_total_character_count():
-			print("aaaa")
-			if page < dialogue.size()-1:
-				page += 1
-				rtl.set_bbcode(dialogue[page])
-				speakerLabel.set_text(speaker[page])
-				rtl.set_visible_characters(0)
+		if(Input.is_action_just_pressed("accept")) || beginPage == true:
+			beginPage = false
+			event = null
+			if rtl.get_visible_characters() >= rtl.get_total_character_count():
+				if page < dialogue.size()-1:
+					page += 1
+					rtl.set_bbcode(dialogue[page])
+					speakerLabel.set_text(speaker[page])
+					rtl.set_visible_characters(0)
+				else:
+					emit_signal("scenarioEnd")
+					queue_free()
 			else:
-				emit_signal("scenarioEnd")
-				queue_free()
-		else:
-			print("bbbb")
-			rtl.set_visible_characters(rtl.get_total_character_count())
+				rtl.set_visible_characters(rtl.get_total_character_count())
 					
 
 

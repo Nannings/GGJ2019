@@ -8,6 +8,7 @@ const DIRECTIONS = {
 	}
 
 var ITEMS
+var TALKS
 
 var root
 var scene
@@ -24,15 +25,21 @@ func _ready():
 func gotoScene(path):
 	call_deferred("_deferred_gotoScene", path) #The call will take place on idle time (when it isn't executing code).
 	
-func loadJSON():
-	var path = "res://data/items.JSON"
+func loadJSON(): 
 	var file = File.new()
-	assert file.file_exists(path)
 	
+	var path = "res://data/items.JSON"
+	assert file.file_exists(path)
 	file.open(path, file.READ)
 	
-	ITEMS = parse_json(file.get_as_text())
-	emit_signal("JSON loaded")
+	ITEMS = parse_json(file.get_as_text()) #alle files in een keer laden, maar nog wel aan de juste constante koppelen
+
+	
+	path = "res://data/talks.JSON"
+	assert file.file_exists(path)
+	file.open(path, file.READ)
+	
+	TALKS = parse_json(file.get_as_text())
 
 func _deferred_gotoScene(path):
 	print(path)

@@ -7,7 +7,8 @@ var direction = Vector2()
 var movement = Vector2()
 var speed = 8000
 var facing = Vector2(0,-1)
-var event
+var talking = false
+
 func _ready():
 	pass
 
@@ -49,8 +50,22 @@ func pickup(itemName, item):
 				var dBoxI = dBox.instance()
 				dBoxI.ini([],[Global.ITEMS[key].pickup])
 				get_tree().get_root().add_child(dBoxI)
-				
+	  
+		
+func talk(sceneScript):
+	if Input.is_action_pressed("accept") && !talking:
+		talking = true
+		for key in Global.TALKS:
+			if key == sceneScript:
+				var speaker = []
+				var dialogue = []
+				for sent in Global.TALKS[key]:
+					speaker.append(Global.TALKS[key][sent].speaker)
+					dialogue.append(Global.TALKS[key][sent].text)
 
-	    #ITEMS[item]
+				var dBoxI = dBox.instance()
+				dBoxI.ini(speaker,dialogue)
+				get_tree().get_root().add_child(dBoxI)
+
 		
 

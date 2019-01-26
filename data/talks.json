@@ -1,0 +1,30 @@
+{
+    "sceneScript": {
+        "0":{
+            "speaker": "???", "text": "Ay"
+        },
+        "1":{
+            "speaker": "Fonsi?", "text": "Fonsi"
+        },
+        "2":{
+            "speaker": "Despacito?", "text": "DY"
+        },
+        "3":{
+            "speaker": "Despacito", "text": "Oh"
+        },
+        "4":{
+            "speaker": "Still Despacito", "text": "Oh no, oh no"
+        },
+        "5":{
+            "speaker": "More Despacito", "text": "Oh yeah"
+        },
+        "6":{
+            "speaker": "Painfull Despacito", "text": "Diridiri, dirididi Daddy"
+        },
+        "7":{
+            "speaker": "Character you are ignoring", "text": "Go"
+        }
+    } 
+}
+
+
