@@ -109,7 +109,7 @@ extents = Vector2( 26.2304, 27.5572 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="player" type="KinematicBody2D" index="0" groups=[
+[node name="player" type="KinematicBody2D" groups=[
 "players",
 ]]
 
@@ -170,7 +170,6 @@ __meta__ = {
 
 [node name="flashLight" type="Node2D" parent="." index="3"]
 
-visible = false
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true

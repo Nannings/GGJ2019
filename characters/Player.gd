@@ -96,7 +96,7 @@ func talk(sceneScript):
 					for c in  Global.TALKS[key][sent].choice:
 						choice.append(c)
 				var dBoxI = dBox.instance()
-				print(speaker, dialogue)
+	
 				dBoxI.ini(speaker, dialogue, choice)
 				get_tree().get_root().add_child(dBoxI)
 
