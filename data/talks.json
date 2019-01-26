@@ -1,13 +1,13 @@
 {
-    "sceneScript": {
+    "sceneDaughterIntro": {
         "0":{
-          "speaker": "???",
-          "text": "Ay",
+          "speaker": "Karen",
+          "text": "Hey Mom!",
           "choice": [ {"yes" : "outcome of yes", "no" : "outcome of no"}  ]
         },
       "1": {
-        "speaker": "Fonsi?",
-        "text": "Fonsi",
+        "speaker": "Karen",
+        "text": "Have you seen the news?",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -16,8 +16,8 @@
         ]
       },
       "2": {
-        "speaker": "Despacito?",
-        "text": "DY",
+        "speaker": "Karen",
+        "text": "They say there's a disaster coming",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -26,8 +26,8 @@
         ]
       },
       "3": {
-        "speaker": "Despacito",
-        "text": "Oh",
+        "speaker": "Karen",
+        "text": "Guess we'll have to leave town for a while.",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -35,56 +35,16 @@
           }
         ]
       },
-      "4": {
-        "speaker": "Still Despacito",
-        "text": "Oh no, oh no",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      },
-      "5": {
-        "speaker": "More Despacito",
-        "text": "Oh yeah",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      },
-      "6": {
-        "speaker": "Painfull Despacito",
-        "text": "Diridiri, dirididi Daddy",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      },
-      "7": {
-        "speaker": "Character you are ignoring",
-        "text": "Go",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      }
-    },
-"sceneScript2": {
+
+"sceneChadIntro": {
         "0":{
-          "speaker": "namenamename",
+          "speaker": "Chad",
           "text": "Ay",
           "choice": [ {"yes" : "outcome of yes", "no" : "outcome of no"}  ]
         },
       "1": {
-        "speaker": "Fonsi?",
-        "text": "Fonsi",
+        "speaker": "Chad",
+        "text": "Fosho",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -93,8 +53,8 @@
         ]
       },
       "2": {
-        "speaker": "Despacito?",
-        "text": "DY",
+        "speaker": "Chad",
+        "text": "Lit",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -103,8 +63,8 @@
         ]
       },
       "3": {
-        "speaker": "Despacito",
-        "text": "Oh",
+        "speaker": "Chad",
+        "text": "Depp",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -113,47 +73,13 @@
         ]
       },
       "4": {
-        "speaker": "Still Despacito",
-        "text": "Oh no, oh no",
+        "speaker": "Chad",
+        "text": "Fortnite dance",
         "choice": [
           {
             "yes": "outcome of yes",
             "no": "outcome of no"
           }
         ]
-      },
-      "5": {
-        "speaker": "More Despacito",
-        "text": "Oh yeah",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      },
-      "6": {
-        "speaker": "Painfull Despacito",
-        "text": "Diridiri, dirididi Daddy",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      },
-      "7": {
-        "speaker": "Character you are ignoring",
-        "text": "Go",
-        "choice": [
-          {
-            "yes": "outcome of yes",
-            "no": "outcome of no"
-          }
-        ]
-      }
-    } 
 
 }
-
-
