@@ -16,7 +16,7 @@
     },
     "phone": {
         "pickup": "Your cellphone",
-        "description": "You can use this to call someone of use the flashlight.",
+        "description": "You can use this to call someone or use the flashlight.",
         "slowdown": 5
     },
     "apple": {

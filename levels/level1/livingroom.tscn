@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/daughter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/boyfriend.tscn" type="PackedScene" id=4]
 
-[node name="livingroom" type="Node2D" index="0"]
+[node name="livingroom" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -32,5 +34,13 @@ _sections_unfolded = [ "Cell" ]
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 2702.32, 2978.29 )
+
+[node name="girlfriend" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 1850.11, 3203.68 )
+
+[node name="boyfriend" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 1863.71, 3795.44 )
 
 

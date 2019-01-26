@@ -179,7 +179,7 @@ __meta__ = {
 
 position = Vector2( 44.3657, 944.357 )
 scale = Vector2( 3.25572, 3.75896 )
-z_index = 10
+z_index = -1
 z_as_relative = false
 enabled = true
 editor_only = false
@@ -202,6 +202,6 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 

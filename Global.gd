@@ -21,13 +21,9 @@ var values = {
 	money = 0,
 	player = {
 		hp = 3,
-		speed = 300,
-		shootrate = 0.8,
-		shotpower = 1
 	},
 	inv = {
 		space = ["empty","empty","empty","empty","empty","empty","empty","empty"],
-		counts = [0,0,0,0,0,0,0,0]
 	}
 }
 

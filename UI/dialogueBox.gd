@@ -31,6 +31,7 @@ func _ready():
 		speakerLabel.set_text(speaker[page])
 	rtl.set_visible_characters(0)
 	beginPage = true
+
 	print(speaker)
 	print(dialogue)
 
