@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dark ambient loop.wav-34d58b9b25a6dc6a8a176ae85453c6f7.sample"
+
+[deps]
+
+source_file="res://titlescreen/dark ambient loop.wav"
+dest_files=[ "res://.import/dark ambient loop.wav-34d58b9b25a6dc6a8a176ae85453c6f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
