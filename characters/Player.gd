@@ -26,8 +26,6 @@ func _physics_process(delta):
 #				pass
 #				print(collider.name)
 
-	print(direction)
-
 	movement = speed * direction * delta
 	move_and_slide(movement, Vector2(0,0))
 	
@@ -35,7 +33,6 @@ func walk():
 	if Input.is_action_pressed("up") || Input.is_action_pressed("down") || Input.is_action_pressed("left") || Input.is_action_pressed("right"):
 		if Input.is_action_pressed("up"):
 			direction += Global.DIRECTIONS.up;
-			print(direction)
 			if (!animations.current_animation == "walking_up" && !animations.current_animation == "walking_right" && !animations.current_animation == "walking_left"):
 				animations.play("walking_up")
 				
@@ -88,5 +85,5 @@ func talk(sceneScript):
 				dBoxI.ini(speaker, dialogue, choice)
 				get_tree().get_root().add_child(dBoxI)
 
-		
+#lower speed by 5% for 1 kg
 

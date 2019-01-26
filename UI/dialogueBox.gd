@@ -6,7 +6,9 @@ signal scenarioEnd
 #onready var choice = preload("res://scenes/objects/choicesbox.tscn")
 onready var speakerLabel = $speakerPanel.get_node("speaker")
 onready var timer = get_node("timeBetweenLetters")
+onready var talklF = get_node("talklessFrames")
 onready var rtl = $panel.get_node("rtl")
+
 
 
 var speaker = []
@@ -40,6 +42,7 @@ func _process(delta):
 	skip()
 	nextPage()
 
+
 func nextPage():
 	set("visibility/visible",true)
 	
@@ -58,13 +61,10 @@ func nextPage():
 						#print(c)
 						
 				else:
-					#get_tree().get_root().get_node("main").get_node("player").talking = false
-					
-					emit_signal("scenarioEnd")
-					queue_free()
+					talklF.start()
+					visible = false
 					
 			else:
-				print(rtl.get_total_character_count())
 				rtl.set_visible_characters(rtl.get_total_character_count())
 			
 			if rtl.get_visible_characters() <= 0:
@@ -98,3 +98,10 @@ func reset():
 	dialogue = []
 	page = 0
 	choiceTime = false
+
+
+func _on_talklessFrames_timeout():
+	print("working?")
+	emit_signal("dialogueDone")
+	get_tree().get_root().get_node("main").get_node("player").talking = false
+	queue_free()
