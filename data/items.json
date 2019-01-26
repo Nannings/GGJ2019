@@ -1,7 +1,67 @@
 {
-    "itemName": {
-        "pickup": "This is a test item, lit.",
-        "description": "Saïda loves lit items like these.",
-        "weight": "5"
-    } 
+    "medkit": {
+        "pickup": "A medkit.",
+        "description": "A medkit, it will heal your injuries and restore your health.",
+        "slowdown": 10
+    } ,
+    "bandages": {
+        "pickup": "A couple of bandages.",
+        "description": "You can use these to gain a little health.",
+        "slowdown": 2
+    },
+    "picAlbum": {
+        "pickup": "A photoalbum, it contains pictures of you and your family. It means a lot to you.",
+        "description": "You keep the memory of your family and your home with you.",
+        "slowdown": 10
+    },
+    "phone": {
+        "pickup": "Your cellphone",
+        "description": "You can use this to call someone of use the flashlight.",
+        "slowdown": 5
+    },
+    "apple": {
+        "pickup": "It's an apple",
+        "description": "Eat it and it will restore some of your health.",
+        "slowdown": 2
+    },
+    "sandwich": {
+        "pickup": "It's a nice tunna sandwich",
+        "description": "Eat it and it will restore half your health.",
+        "slowdown": 5
+    },
+    "childToy": {
+        "pickup": "It's a toy from your childhood. It means a lot to you.",
+        "description": "It reminds you of a better time.",
+        "slowdown": 15
+    },
+    "jewelryImportant": {
+        "pickup": "It's a necklace, it belonged to someone you love. It means a lot to you.",
+        "description": "It reminds you of the time you had with the person most important to you.",
+        "slowdown": 2
+    },
+    "earringsGrandma": {
+        "pickup": "It's a pair of earrings, it belonged to your late grandmother. It means a lot to you.",
+        "description": "It reminds you of the time you had with a person you loved.",
+        "slowdown": 2
+    },
+    "pet": {
+        "pickup": "It's your pet! It's your best friend in the whole world and a very good boy!",
+        "description": "It's your pet!",
+        "slowdown": 5
+    },
+    "daughter": {
+        "pickup": "Your daughter. She means the world to you!",
+        "description": "It's your daughter",
+        "slowdown": 10
+    },
+    "daughterBoyfriend": {
+        "pickup": "Your daughters boyfriend. You don't particullary care for him.",
+        "description": "It's your daughter's boyfriend, you don't think he's all that great.",
+        "slowdown": 10
+    },
+    "book": {
+        "pickup": "It's your favorite book. You've read it a thousand times and still can't get enough of it. It means a lot to you.",
+        "description": "It's your alltime favorite book.",
+        "slowdown": 10
+    },
 }
