@@ -1,19 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://placeholders/PNG/Items/platformPack_item009.png" type="Texture" id=1]
+[ext_resource path="res://objects/items/gun/Closet_placeholder-1.png.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
+[ext_resource path="res://objects/items/gun/Item 2 - Gun-1.png.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 30.0
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 70.7107
+extents = Vector2( 10, 13.7684 )
 
-[node name="item" type="StaticBody2D" groups=[
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 402.1 )
+
+[node name="item" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -33,7 +34,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
+position = Vector2( -0.141123, -4.67349 )
+scale = Vector2( 15.0097, 23.3025 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
@@ -46,9 +48,17 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
+itemName = "gun"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
+position = Vector2( -0.41811, 0 )
+scale = Vector2( 25.8663, 1 )
 shape = SubResource( 2 )
+
+[node name="inside" type="Sprite" parent="." index="3"]
+
+visible = false
+texture = ExtResource( 3 )
 
 
