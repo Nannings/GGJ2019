@@ -12,7 +12,6 @@ onready var audio = get_node("AudioStreamPlayer2D")
 
 var speaker = []
 var dialogue = []
-var choices = []
 var player
 var voices = []
 var page = 0
@@ -20,10 +19,9 @@ var choiceTime = false
 var event
 var beginPage 
 
-func ini(speakerData, dialogueData, choiceData, playerI):
+func ini(speakerData, dialogueData, playerI):
 	speaker = speakerData
 	dialogue = dialogueData
-	choices = choiceData
 	player = playerI
 #	voices = voiceData
 
