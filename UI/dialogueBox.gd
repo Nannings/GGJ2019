@@ -51,11 +51,16 @@ func nextPage():
 					rtl.set_bbcode(dialogue[page])
 					speakerLabel.set_text(speaker[page])
 					rtl.set_visible_characters(0)
+					speakerLabel.set_visible_characters(0)
 				else:
 					emit_signal("scenarioEnd")
 					queue_free()
 			else:
 				rtl.set_visible_characters(rtl.get_total_character_count())
+				speakerLabel.set_visible_characters(speakerLabel.get_total_character_count())
+			
+			if rtl.get_visible_characters() <= 0:
+				beginPage = true
 					
 
 
