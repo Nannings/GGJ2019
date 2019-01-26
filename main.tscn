@@ -385,6 +385,7 @@ position = Vector2( 357.234, 227.854 )
 
 position = Vector2( 455.216, 446.172 )
 scale = Vector2( 0.2, 0.2 )
+battery = 1
 
 [node name="support" parent="." index="3" instance=ExtResource( 4 )]
 
