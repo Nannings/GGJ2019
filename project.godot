@@ -28,7 +28,7 @@ window/size/height=920
 
 wav={
 "compress/mode": 0,
-"edit/loop": true,
+"edit/loop": false,
 "edit/normalize": true,
 "edit/trim": true,
 "force/8_bit": false,

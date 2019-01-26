@@ -1,13 +1,15 @@
 {
     "sceneScript": {
         "0":{
-          "speaker": "???",
-          "text": "Ay",
+          "speaker": "man",
+          "text": "Horray",
+          "voice" : "voice1",
           "choice": [ {"yes" : "outcome of yes", "no" : "outcome of no"}  ]
         },
       "1": {
-        "speaker": "Fonsi?",
-        "text": "Fonsi",
+        "speaker": "woman",
+        "text": "Lets move!",
+        "voice": "voice2",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -16,8 +18,9 @@
         ]
       },
       "2": {
-        "speaker": "Despacito?",
-        "text": "DY",
+        "speaker": "man on radio!",
+        "text": "in need backup!!!",
+        "voice": "voice3",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -28,6 +31,7 @@
       "3": {
         "speaker": "Despacito",
         "text": "Oh",
+        "voice": "none",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -38,6 +42,7 @@
       "4": {
         "speaker": "Still Despacito",
         "text": "Oh no, oh no",
+        "voice": "none",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -48,6 +53,7 @@
       "5": {
         "speaker": "More Despacito",
         "text": "Oh yeah",
+        "voice": "none",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -58,6 +64,7 @@
       "6": {
         "speaker": "Painfull Despacito",
         "text": "Diridiri, dirididi Daddy",
+        "voice": "none",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -68,6 +75,7 @@
       "7": {
         "speaker": "Character you are ignoring",
         "text": "Go",
+        "voice": "none",
         "choice": [
           {
             "yes": "outcome of yes",
@@ -77,11 +85,17 @@
       }
     },
 "sceneScript2": {
-        "0":{
-          "speaker": "Despacito 2",
-          "text": "Don't, just don't",
-          "choice": [ {"yes" : "outcome of yes", "no" : "outcome of no"}  ]
-        }
+  "0": {
+    "speaker": "Despacito 2",
+    "text": "Don't, just don't",
+    "voice": "none",
+    "choice": [
+      {
+        "yes": "outcome of yes",
+        "no": "outcome of no"
+      }
+    ]
+  }
       }
 }
 

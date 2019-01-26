@@ -7,14 +7,13 @@ onready var flashLight = get_node("flashLight")
 
 export (float) var battery = 1
 
-
 var direction = Vector2()
 var movement = Vector2()
 var speed = 8000
 var facing = Vector2(0,-1)
 var talking = false
 var flashLightSprite 
-var lightDecrease = 10 #less is faster
+var lightDecrease = 10000 #less is faster
 
 func _ready():
 	flashLightSprite = flashLight.get_node("flashLightSprite")
@@ -44,7 +43,6 @@ func walk():
 		if Input.is_action_pressed("up"):
 			direction += Global.DIRECTIONS.up;
 			flashLight.rotation_degrees = 180
-			print(direction)
 			if (!animations.current_animation == "walking_up" && !animations.current_animation == "walking_right" && !animations.current_animation == "walking_left"):
 				animations.play("walking_up")
 				
@@ -90,14 +88,17 @@ func talk(sceneScript):
 				var speaker = []
 				var dialogue = []
 				var choice = []
+				var voices = []
 				for sent in Global.TALKS[key]:
 					speaker.append(Global.TALKS[key][sent].speaker)
 					dialogue.append(Global.TALKS[key][sent].text)
 					for c in  Global.TALKS[key][sent].choice:
 						choice.append(c)
+					voices.append(Global.TALKS[key][sent].voice)
+					
 
 				var dBoxI = dBox.instance()
-				dBoxI.ini(speaker, dialogue, choice)
+				dBoxI.ini(speaker, dialogue, choice, voices)
 				get_tree().get_root().add_child(dBoxI)
 
 #lower speed by 5% for 1 kg
