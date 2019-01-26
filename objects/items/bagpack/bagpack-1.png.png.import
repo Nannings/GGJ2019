@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/childhood toy-1.png.png-d1ea7c04d31ab6a23cf4d138adad2b80.stex"
+path="res://.import/bagpack-1.png.png-2a32ef359a57cf8efd36c899d3fd2fcb.stex"
 
 [deps]
 
-source_file="res://objects/items/childhood toy-1.png.png"
-dest_files=[ "res://.import/childhood toy-1.png.png-d1ea7c04d31ab6a23cf4d138adad2b80.stex" ]
+source_file="res://objects/items/bagpack/bagpack-1.png.png"
+dest_files=[ "res://.import/bagpack-1.png.png-2a32ef359a57cf8efd36c899d3fd2fcb.stex" ]
 
 [params]
 

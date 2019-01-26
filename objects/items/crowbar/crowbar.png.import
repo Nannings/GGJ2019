@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gasmask-1.png.png-fb81861bd17fdc71347e1f39b5b7e4b4.stex"
+path="res://.import/crowbar.png-9c8ebee21ea62a018719030cdd88cb91.stex"
 
 [deps]
 
-source_file="res://objects/items/gasmask-1.png.png"
-dest_files=[ "res://.import/gasmask-1.png.png-fb81861bd17fdc71347e1f39b5b7e4b4.stex" ]
+source_file="res://objects/items/crowbar/crowbar.png"
+dest_files=[ "res://.import/crowbar.png-9c8ebee21ea62a018719030cdd88cb91.stex" ]
 
 [params]
 

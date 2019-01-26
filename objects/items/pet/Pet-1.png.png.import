@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jewlery - necklace-1.png.png-ae28d9885bc22c1786803d24487e562c.stex"
+path="res://.import/Pet-1.png.png-b206f571b0a9626e3a59ff9687997b30.stex"
 
 [deps]
 
-source_file="res://objects/items/jewlery - necklace-1.png.png"
-dest_files=[ "res://.import/jewlery - necklace-1.png.png-ae28d9885bc22c1786803d24487e562c.stex" ]
+source_file="res://objects/items/pet/Pet-1.png.png"
+dest_files=[ "res://.import/Pet-1.png.png-b206f571b0a9626e3a59ff9687997b30.stex" ]
 
 [params]
 

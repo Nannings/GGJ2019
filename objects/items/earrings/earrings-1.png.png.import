@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/earrings-1.png.png-51b4181d7483c8756bb61800d36f39fe.stex"
+path="res://.import/earrings-1.png.png-01e31358f761b8c6a6e63ec5492fac0e.stex"
 
 [deps]
 
-source_file="res://objects/items/earrings-1.png.png"
-dest_files=[ "res://.import/earrings-1.png.png-51b4181d7483c8756bb61800d36f39fe.stex" ]
+source_file="res://objects/items/earrings/earrings-1.png.png"
+dest_files=[ "res://.import/earrings-1.png.png-01e31358f761b8c6a6e63ec5492fac0e.stex" ]
 
 [params]
 
