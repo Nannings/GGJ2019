@@ -1,8 +1,6 @@
 extends Area2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+export (String) var itemName = "sceneScript"
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -14,4 +12,4 @@ func _physics_process(delta):
 		for i in range(get_overlapping_bodies().size()):
 			var overlap = get_overlapping_bodies()[i]
 			if overlap.is_in_group("players"):
-				overlap.pickup("itemName", self)
+				overlap.pickup(itemName, self)

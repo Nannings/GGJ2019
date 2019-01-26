@@ -71,14 +71,14 @@ func action():
 	pass
 		
 func pickup(itemName, item):
-	if Input.is_action_pressed("accept"):
+	if Input.is_action_pressed("accept") && !talking:
 		for key in Global.ITEMS:
 			if key == itemName:
 				print(Global.ITEMS[key].pickup)
 				item.get_owner().queue_free()
 				var dBoxI = dBox.instance()
 				print(Global.ITEMS[key].pickup)
-				dBoxI.ini([],[Global.ITEMS[key].pickup])
+				dBoxI.ini([],[Global.ITEMS[key].pickup], [])
 				get_tree().get_root().add_child(dBoxI)
 	  
 		
@@ -101,6 +101,10 @@ func talk(sceneScript):
 				get_tree().get_root().add_child(dBoxI)
 
 #lower speed by 5% for 1 kg
+func doneTalking():
+	print("test")
+	talking = false
+
 
 func hsv_lerp(cola, colb, t):
     #This part will flip the direction of the lerp if the two colors are above

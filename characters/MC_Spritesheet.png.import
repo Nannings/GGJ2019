@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wall-flat.png-1cbc181f8fe1773050e7b4bd2334f3c0.stex"
+path="res://.import/MC_Spritesheet.png-3536e404ccd04411f21ec316a7f2b919.stex"
 
 [deps]
 
-source_file="res://objects/wall-flat.png"
-dest_files=[ "res://.import/wall-flat.png-1cbc181f8fe1773050e7b4bd2334f3c0.stex" ]
+source_file="res://characters/MC_Spritesheet.png"
+dest_files=[ "res://.import/MC_Spritesheet.png-3536e404ccd04411f21ec316a7f2b919.stex" ]
 
 [params]
 

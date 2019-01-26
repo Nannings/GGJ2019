@@ -29,6 +29,11 @@
         "description": "Eat it and it will restore half your health.",
         "slowdown": 5
     },
+    "talkie": {
+        "pickup": "I hear a static sound coming from it.",
+        "description": "This item will give you hint on your journey",
+        "slowdown": 5
+    },
     "childToy": {
         "pickup": "It's a toy from your childhood. It means a lot to you.",
         "description": "It reminds you of a better time.",
@@ -63,5 +68,5 @@
         "pickup": "It's your favorite book. You've read it a thousand times and still can't get enough of it. It means a lot to you.",
         "description": "It's your alltime favorite book.",
         "slowdown": 10
-    },
+    }
 }

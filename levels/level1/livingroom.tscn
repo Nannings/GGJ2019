@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
-[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/daughter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/boyfriend.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/items/walkie_talkie/talkie.tscn" type="PackedScene" id=5]
 
-[node name="livingroom" type="Node2D"]
+[node name="livingroom" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -35,12 +36,22 @@ _sections_unfolded = [ "Cell" ]
 
 position = Vector2( 2702.32, 2978.29 )
 
-[node name="girlfriend" parent="." index="2" instance=ExtResource( 3 )]
+[node name="supports" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="girlfriend" parent="supports" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 1850.11, 3203.68 )
 
-[node name="boyfriend" parent="." index="3" instance=ExtResource( 4 )]
+[node name="boyfriend" parent="supports" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 1863.71, 3795.44 )
+
+[node name="items" type="Node2D" parent="." index="3"]
+
+[node name="item" parent="items" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 990.081, 2775.93 )
 
 

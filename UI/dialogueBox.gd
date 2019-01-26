@@ -1,7 +1,10 @@
 extends Control
 
+
+onready var player = preload("res://characters/player.tscn")
+
 signal choiceEvent(title)
-signal scenarioEnd
+signal dialogueDone
 
 #onready var choice = preload("res://scenes/objects/choicesbox.tscn")
 onready var speakerLabel = $speakerPanel.get_node("speaker")
@@ -25,6 +28,7 @@ func ini(speakerData, dialogueData, choiceData):
 	choices = choiceData
 
 func _ready():
+	connect("dialogueDone", player, "doneTalking")
 	rtl.set_bbcode(dialogue[page])
 	if speaker != []:
 		speakerLabel.set_text(speaker[page])
@@ -104,5 +108,5 @@ func reset():
 func _on_talklessFrames_timeout():
 	print("working?")
 	emit_signal("dialogueDone")
-	get_tree().get_root().get_node("main").get_node("player").talking = false
+#	get_tree().get_root().get_node("main").get_node("player").talking = false
 	queue_free()
