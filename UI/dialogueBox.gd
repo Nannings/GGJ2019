@@ -11,14 +11,16 @@ onready var rtl = $panel.get_node("rtl")
 
 var speaker = []
 var dialogue = []
+var choices = []
 var page = 0
 var choiceTime = false
 var event
 var beginPage 
 
-func ini(speakerData,dialogueData):
+func ini(speakerData, dialogueData, choiceData):
 	speaker = speakerData
 	dialogue = dialogueData
+	choices = choiceData
 
 func _ready():
 	rtl.set_bbcode(dialogue[page])
@@ -52,6 +54,11 @@ func nextPage():
 					speakerLabel.set_text(speaker[page])
 					rtl.set_visible_characters(0)
 					speakerLabel.set_visible_characters(0)
+					
+					print(choices[page])
+					#for c in choices[page].values():
+						#print(c)
+						
 				else:
 					emit_signal("scenarioEnd")
 					queue_free()

@@ -1,29 +1,80 @@
 {
     "sceneScript": {
         "0":{
-            "speaker": "???", "text": "Ay"
+          "speaker": "???",
+          "text": "Ay",
+          "choice": [ {"yes" : "outcome of yes", "no" : "outcome of no"}  ]
         },
-        "1":{
-            "speaker": "Fonsi?", "text": "Fonsi"
-        },
-        "2":{
-            "speaker": "Despacito?", "text": "DY"
-        },
-        "3":{
-            "speaker": "Despacito", "text": "Oh"
-        },
-        "4":{
-            "speaker": "Still Despacito", "text": "Oh no, oh no"
-        },
-        "5":{
-            "speaker": "More Despacito", "text": "Oh yeah"
-        },
-        "6":{
-            "speaker": "Painfull Despacito", "text": "Diridiri, dirididi Daddy"
-        },
-        "7":{
-            "speaker": "Character you are ignoring", "text": "Go"
-        }
+      "1": {
+        "speaker": "Fonsi?",
+        "text": "Fonsi",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      },
+      "2": {
+        "speaker": "Despacito?",
+        "text": "DY",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      },
+      "3": {
+        "speaker": "Despacito",
+        "text": "Oh",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      },
+      "4": {
+        "speaker": "Still Despacito",
+        "text": "Oh no, oh no",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      },
+      "5": {
+        "speaker": "More Despacito",
+        "text": "Oh yeah",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      },
+      "6": {
+        "speaker": "Painfull Despacito",
+        "text": "Diridiri, dirididi Daddy",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      },
+      "7": {
+        "speaker": "Character you are ignoring",
+        "text": "Go",
+        "choice": [
+          {
+            "yes": "outcome of yes",
+            "no": "outcome of no"
+          }
+        ]
+      }
     } 
 }
 

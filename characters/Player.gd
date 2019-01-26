@@ -59,12 +59,15 @@ func talk(sceneScript):
 			if key == sceneScript:
 				var speaker = []
 				var dialogue = []
+				var choice = []
 				for sent in Global.TALKS[key]:
 					speaker.append(Global.TALKS[key][sent].speaker)
 					dialogue.append(Global.TALKS[key][sent].text)
+					for c in  Global.TALKS[key][sent].choice:
+						choice.append(c)
 
 				var dBoxI = dBox.instance()
-				dBoxI.ini(speaker,dialogue)
+				dBoxI.ini(speaker, dialogue, choice)
 				get_tree().get_root().add_child(dBoxI)
 
 		
