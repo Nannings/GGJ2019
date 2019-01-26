@@ -25,11 +25,13 @@ func ini(speakerData, dialogueData, choiceData):
 	choices = choiceData
 
 func _ready():
-	rtl.set_bbcode(dialogue[page])
+	if page != 0:
+		rtl.set_bbcode(dialogue[page])
 	if speaker != []:
 		speakerLabel.set_text(speaker[page])
 	rtl.set_visible_characters(0)
 	beginPage = true
+
 	print(speaker)
 	print(dialogue)
 
