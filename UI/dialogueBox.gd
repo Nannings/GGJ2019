@@ -35,7 +35,7 @@ func _input(e):
 	event = e
 
 	
-func _process(delta):
+func _process(delta):		
 	hide()
 	skip()
 	nextPage()
@@ -60,8 +60,11 @@ func nextPage():
 						#print(c)
 						
 				else:
+					#get_tree().get_root().get_node("main").get_node("player").talking = false
+					
 					emit_signal("scenarioEnd")
 					queue_free()
+					
 			else:
 				rtl.set_visible_characters(rtl.get_total_character_count())
 				speakerLabel.set_visible_characters(speakerLabel.get_total_character_count())

@@ -28,8 +28,15 @@ position = Vector2( 455.216, 446.172 )
 
 position = Vector2( 322.345, 470.991 )
 
-[node name="TileMap" type="TileMap" parent="." index="4"]
+[node name="support2" parent="." index="4" instance=ExtResource( 4 )]
 
+position = Vector2( 600, 470.991 )
+_sections_unfolded = [ "Transform" ]
+sceneScriptName = "sceneScript2"
+
+[node name="TileMap" type="TileMap" parent="." index="5"]
+
+position = Vector2( -121, 5 )
 z_index = -2
 mode = 0
 tile_set = ExtResource( 5 )
