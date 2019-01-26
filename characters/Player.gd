@@ -3,6 +3,7 @@ extends KinematicBody2D
 onready var dBox = preload("res://UI/dialogueBox.tscn")
 onready var sprite = $sprite 
 onready var animations = sprite.get_node("animations")
+onready var flashLight = get_node("flashLight")
 
 
 var direction = Vector2()
@@ -35,22 +36,26 @@ func walk():
 	if Input.is_action_pressed("up") || Input.is_action_pressed("down") || Input.is_action_pressed("left") || Input.is_action_pressed("right"):
 		if Input.is_action_pressed("up"):
 			direction += Global.DIRECTIONS.up;
+			flashLight.rotation_degrees = 180
 			print(direction)
 			if (!animations.current_animation == "walking_up" && !animations.current_animation == "walking_right" && !animations.current_animation == "walking_left"):
 				animations.play("walking_up")
 				
 		elif Input.is_action_pressed("down"):
 			direction += Global.DIRECTIONS.down;
+			flashLight.rotation_degrees = 0
 			if (!animations.current_animation == "walking_down" && !animations.current_animation == "walking_right" && !animations.current_animation == "walking_left"):
 				animations.play("walking_down")
 				
 		if Input.is_action_pressed("right"):
 			direction += Global.DIRECTIONS.right;
+			flashLight.rotation_degrees = -90
 			if (!animations.current_animation == "walking_right"):
 				animations.play("walking_right")
 				
 		elif Input.is_action_pressed("left"):
 			direction += Global.DIRECTIONS.left;
+			flashLight.rotation_degrees = 90
 			if (!animations.current_animation == "walking_left"):
 				animations.play("walking_left")
 	else:
