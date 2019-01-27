@@ -37,7 +37,6 @@ texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="chair" index="0"]
 
-visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -88,5 +87,7 @@ bounce = 0.0
 
 position = Vector2( 17.6849, 16.3244 )
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="4"]
 
 
