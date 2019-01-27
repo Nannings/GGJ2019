@@ -1,16 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/daughter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/boyfriend.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/items/walkie_talkie/talkie.tscn" type="PackedScene" id=5]
-[ext_resource path="res://objects/items/souvenir/souvenir.tscn" type="PackedScene" id=6]
-[ext_resource path="res://objects/items/gun_closet/gunCloset.tscn" type="PackedScene" id=7]
-[ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=8]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=9]
+[ext_resource path="res://characters/teli.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/items/walkie_talkie/talkie.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/items/souvenir/souvenir.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objects/items/gun_closet/gunCloset.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/conditionEvents/sceneHouseIntro.tscn" type="PackedScene" id=11]
 
-[node name="livingroom" type="Node2D"]
+[node name="livingroom" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -42,12 +44,9 @@ _sections_unfolded = [ "Cell", "Z Index" ]
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
-visible = false
-position = Vector2( 3192.32, 2859.21 )
+position = Vector2( 2350, 2650 )
 
 [node name="supports" type="Node2D" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="girlfriend" parent="supports" index="0" instance=ExtResource( 3 )]
 
@@ -57,17 +56,23 @@ position = Vector2( 1754.88, 3367.46 )
 
 position = Vector2( 1768.48, 3990 )
 
+[node name="teli" parent="supports" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 4493.79, 3511.96 )
+
 [node name="items" type="Node2D" parent="." index="3"]
 
-[node name="item" parent="items" index="0" instance=ExtResource( 5 )]
+editor/display_folded = true
+
+[node name="item" parent="items" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 990.081, 2775.93 )
 
-[node name="item2" parent="items" index="1" instance=ExtResource( 6 )]
+[node name="item2" parent="items" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 3944.38, 4414.91 )
 
-[node name="item3" parent="items" index="2" instance=ExtResource( 7 )]
+[node name="item3" parent="items" index="2" instance=ExtResource( 8 )]
 
 position = Vector2( 5275.69, 2087.66 )
 
@@ -76,21 +81,30 @@ position = Vector2( 5275.69, 2087.66 )
 editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 
-[node name="transpoint" parent="trans" index="0" instance=ExtResource( 8 )]
+[node name="transpoint" parent="trans" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 4482.42, 954.022 )
 scale = Vector2( 2, 2 )
 levelPlusScene = "level1/kitchen"
 
-[node name="transpoint2" parent="trans" index="1" instance=ExtResource( 8 )]
+[node name="transpoint2" parent="trans" index="1" instance=ExtResource( 9 )]
 
 position = Vector2( 158.667, 1912.36 )
 scale = Vector2( 1, 4 )
 levelPlusScene = "level1/hall"
 
-[node name="Clock" parent="." index="5" instance=ExtResource( 9 )]
+[node name="Clock" parent="." index="5" instance=ExtResource( 10 )]
 
 margin_right = 1251.0
 margin_bottom = 830.0
+
+[node name="events" type="Node2D" parent="." index="6"]
+
+z_index = -1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="eventpoint" parent="events" index="0" instance=ExtResource( 11 )]
+
+position = Vector2( 2350, 2700 )
 
 

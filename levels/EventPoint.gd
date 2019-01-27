@@ -12,11 +12,7 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-func _physics_process(delta):
-	if get_overlapping_bodies().size() > 1:
-		for i in range(get_overlapping_bodies().size()):
-			var overlap = get_overlapping_bodies()[i]
-			if overlap.is_in_group("players"):
-				overlap.talk(sceneScript, self)
-				queue_free()
+func _on_eventpoint_body_entered(body):
+	if body.is_in_group("players"):
+		body.event(eventScene, self)
+		print("test1") 

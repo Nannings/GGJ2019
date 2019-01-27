@@ -10,7 +10,7 @@
     },
     "2": {
       "speaker": "Karen",
-      "text": "You should go up to the television to find out more!"
+      "text": "You should Pess Z at the television to find out more!"
     }
   },
   "sceneHouseEnd": {
@@ -75,6 +75,32 @@
     "0": {
       "speaker": "Basement",
       "text": "You went to look for items in the basement, but everything went black before your eyes. Hank attacked you and you lose half your health."
+    }
+  },
+  "tutorial":{
+    "0": {
+      "speaker": "Broadcaster",
+      "text": "...And that why the world is ending. Prepare to leave your home in these dark days."
+    },
+    "1": {
+      "speaker": "Broadcaster",
+      "text": "Survey's show, most people can only hold items."
+    },
+    "2": {
+      "speaker": "Broadcaster",
+      "text": "So be sure to pickup what's important or usefull you with the Z key!"
+    },
+    "3": {
+      "speaker": "Broadcaster",
+      "text": "Even if it weights much and slows you down, it may hold important memories to you."
+    },
+    "4": {
+      "speaker": "Broadcaster",
+      "text": "Even if it weights much and slows you down, it may hold important memories to you."
+    },
+    "5": {
+      "speaker": "Broadcaster",
+      "text": "Umm, I guess this is the last broadcast. Sorry, just wanted to say what I could"
     }
   }
 }

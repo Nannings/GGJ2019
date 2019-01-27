@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/Support.gd" type="Script" id=1]
+[ext_resource path="res://characters/tv.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 265, 119.754 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 486.766
+
+[node name="teli" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+sceneScriptName = "tutorial"
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="col" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 17, 17.7535 )
+shape = SubResource( 1 )
+
+[node name="talkArea" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="col" type="CollisionShape2D" parent="talkArea" index="0"]
+
+position = Vector2( 1.62108, 17.2915 )
+shape = SubResource( 2 )
+
+
