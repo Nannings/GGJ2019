@@ -143,5 +143,10 @@
         "pickup": "You search the closet and find a piece of police evidence.",
         "description": "A crimescene photo.",
         "slowdown": 5
+    },
+    "backpackFull": {
+        "pickup": "You can't carry anymore items.",
+        "description": "",
+        "slowdown": 0
     }
 }

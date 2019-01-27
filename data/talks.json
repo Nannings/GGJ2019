@@ -76,11 +76,5 @@
       "speaker": "Basement",
       "text": "You went to look for items in the basement, but everything went black before your eyes. Hank attacked you and you lose half your health."
     }
-  },
-  "backpackFull": {
-    "0": {
-      "speaker": "Hemma",
-      "text": "I can't carry anymore items."
-    }
   }
 }

@@ -94,8 +94,7 @@ func action():
 		
 func pickup(itemName, item):
 	if Input.is_action_pressed("accept") && !Global.values.player.talking:
-		print("test1")
-		if Global.values.inv.space.size() != 1:
+		if Global.values.inv.space.size() != 10:
 			for key in Global.ITEMS:
 				if key == itemName:
 						Global.values.inv.space.append(itemName)
@@ -111,6 +110,7 @@ func pickup(itemName, item):
 						dBoxI.ini([],[Global.ITEMS[key].pickup], self)
 						get_tree().get_root().add_child(dBoxI)
 		else:
+			print("test1")
 			itemName = "backpackFull"
 			for key in Global.ITEMS:
 				if key == itemName:
