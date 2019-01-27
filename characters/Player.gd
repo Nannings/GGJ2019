@@ -34,6 +34,18 @@ func _ready():
 func _process(delta):
 	speed = maxSpeed - Global.calculateWeight()
 #	print(speed)
+
+	if Input.is_key_pressed(KEY_P):
+		flashLightActive = !flashLightActive
+		if not flashLightActive:
+			flashLightSprite2.visible = true
+			flashLightSprite.visible = false
+		else:
+			flashLightSprite2.visible = false
+			flashLightSprite.visible = true
+		
+	
+	print(flashLightActive)
 	
 	if not flashLightActive:
 		flashLightSprite2.visible = true
