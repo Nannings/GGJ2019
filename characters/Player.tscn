@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://characters/Player.gd" type="Script" id=1]
 [ext_resource path="res://characters/MC_Spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://characters/flash.png" type="Texture" id=3]
+[ext_resource path="res://flashLight2.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -158,7 +159,6 @@ shape = SubResource( 6 )
 
 [node name="flashLight" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -191,7 +191,36 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="flashLightSprite2" type="Light2D" parent="flashLight" index="1"]
+
+position = Vector2( 6.52293, -1.71283 )
+scale = Vector2( 3.5, 3.5 )
+z_index = -1
+z_as_relative = false
+enabled = true
+editor_only = false
+texture = ExtResource( 4 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 3
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Tween" type="Tween" parent="." index="3"]
 
