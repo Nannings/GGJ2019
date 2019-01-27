@@ -24,9 +24,26 @@ var values = {
 		hp = 3,
 	},
 	inv = {
-		space = ["empty","empty","empty","empty","empty","empty","empty","empty"],
+		space = ["medkit","medkit","medkit","medkit","empty","empty","empty","empty"],
+#		space = ["empty","empty","empty","empty","empty","empty","empty","empty"],
 	}
 }
+
+func getWeightOfItem(name):
+	for item in ITEMS:
+		if item == name:
+#			print(ITEMS[item].slowdown)
+			return(ITEMS[item].slowdown)
+	return 0
+
+func calculateWeight():
+#	print(Global.values.inv)
+	var weight = 0;
+	var weightMultiplier = 25
+	for item in Global.values.inv.space:
+		if item != "empty":
+			weight += getWeightOfItem(item) * weightMultiplier
+	return weight
 
 func _ready():
 	root = get_tree().get_root()
