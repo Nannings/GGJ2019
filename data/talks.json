@@ -32,13 +32,13 @@
     },
     "1": {
       "speaker": "NightTime",
-      "text": "Your companion(s) was hungry and went on a midnight eating binge. As a result your food supply was decreased."
+      "text": "Your companion was hungry and went on a midnight eating binge. As a result your food supply was decreased."
     }
   },
   "Cutscene2": {
     "0": {
       "speaker": "NightTime",
-      "text": "You travelled all through the night and consequently lost some health. Home seems like a distant dream."
+      "text": "Your car suddenly exploded. You were able to get away, but not without injuring yourself. You lost some health and you long to go home."
     }
   },
   "CutsceneHank": {
@@ -78,4 +78,3 @@
     }
   }
 }
-
