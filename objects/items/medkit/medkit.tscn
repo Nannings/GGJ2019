@@ -7,14 +7,14 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 157.879, 10 )
+extents = Vector2( 160.649, 10 )
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 250.139
+extents = Vector2( 8.76667, 252.328 )
 
-[node name="medkit" type="StaticBody2D" groups=[
+[node name="item" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -34,13 +34,12 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -2.4546, -3.4888 )
+position = Vector2( 4.94787, -9.04065 )
 scale = Vector2( 0.984934, 15.6989 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -53,6 +52,8 @@ itemName = "medkit"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
+position = Vector2( -2.11335, 6.14165 )
+scale = Vector2( 26.9932, 0.918206 )
 shape = SubResource( 2 )
 
 [node name="inside" type="Sprite" parent="." index="3"]
