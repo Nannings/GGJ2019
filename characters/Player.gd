@@ -12,13 +12,20 @@ signal dialogueDone
 var direction = Vector2()
 var movement = Vector2()
 var speed = 8000 #min = 8000
+var minSpeed = 8000
 var facing = Vector2(0,-1)
 var talking = false
 var flashLightSprite 
 var flashLightSprite2
-var lightDecrease = 10 #less is faster
+var lightDecrease = 100 #less is faster
 var switchLight = false
 var flashLightActive = false;
+
+func changeWeight(amount):
+	speed += amount
+	if speed < 8000:
+		speed = 8000
+	
 
 func _ready():
 	flashLightSprite = flashLight.get_node("flashLightSprite")
@@ -32,6 +39,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	speed = minSpeed - Global.calculateWeight()
+#	print(speed)
 	
 	if not flashLightActive:
 		flashLightSprite2.visible = true
@@ -96,10 +105,8 @@ func pickup(itemName, item):
 			if key == itemName:
 				print(Global.ITEMS[key].pickup)
 				if !item.get_owner().has_node("inside"):
-					print('get it')
 					item.get_owner().queue_free()
 				else:
-					print('leave it') 
 					item.get_owner().get_node("pickArea").queue_free()
 					if item.get_owner().get_node("inside").visible == true:
 						item.get_owner().get_node("inside").visible = false
