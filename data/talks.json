@@ -1,48 +1,81 @@
 {
-  "sceneDaughterIntro": {
-    "0":{
+  "sceneHouseIntro": {
+    "0": {
       "speaker": "Karen",
-      "text": "Hey Mom!",
+      "text": "Mom, Come quick!"
     },
-    "1":{
+    "1": {
       "speaker": "Karen",
-      "text": "Have you seen the news?",
+      "text": "It is all over the news. The world is coming to an end!"
     },
     "2": {
       "speaker": "Karen",
-      "text": "They say there's a disaster coming",
-    },
-    "3": {
-      "speaker": "Karen",
-      "text": "Guess we'll have to leave town for a while.",
+      "text": "You should go up to the television to find out more!"
     }
   },
-
-  "sceneChadIntro": {
-          "0":{
-            "speaker": "Chad",
-            "text": "Ay",
-
-          },
-        "1": {
-          "speaker": "Chad",
-          "text": "Fosho",
-        },
-        "2": {
-          "speaker": "Chad",
-          "text": "Lit",
-        },
-        "3": {
-          "speaker": "Chad",
-          "text": "Depp",
-        },
-        "4": {
-          "speaker": "Chad",
-          "text": "Fortnite dance",
-        },
-          "5": {
-            "speaker": "Chad",
-            "text": "*sigh*",
-          }
-        }
+  "sceneHouseEnd": {
+    "0": {
+      "speaker": "Karen",
+      "text": "Are you just gonna leave us here?"
+    }
+  },
+  "Cutscene1": {
+    "0": {
+      "speaker": "NightTime",
+      "text": "You travelled through all through the night and consequently lost some health. You feel tired and already start missing home."
+    }
+  },
+  "CutScene1People": {
+    "0": {
+      "speaker": "NightTime",
+      "text": "You travelled all through the night and consequently lost some health. You feel tired and already start missing home."
+    },
+    "1": {
+      "speaker": "NightTime",
+      "text": "Your companion(s) was hungry and went on a midnight eating binge. As a result your food supply was decreased."
+    }
+  },
+  "Cutscene2": {
+    "0": {
+      "speaker": "NightTime",
+      "text": "You travelled all through the night and consequently lost some health. Home seems like a distant dream."
+    }
+  },
+  "CutsceneHank": {
+    "0": {
+      "speaker": "NightTime",
+      "text": "While you were sleeping Hank stole an item and fled the scene!"
+    }
+  },
+  "SquatterHouse": {
+    "0": {
+      "speaker": "Hank",
+      "text": "Your weird neighbor Hank wants to join you on your journey? Do you want to take him with you?"
+    }
+  },
+  "Newsarticle1": {
+    "0": {
+      "speaker": "Newsarticle",
+      "text": "Missing person report! Police are searching for a missing woman. She left her house and did not come back. Concerns are held as this behaviour is out of character."
+    }
+  },
+  "Newsarticle2": {
+    "0": {
+      "speaker": "Newsarticle",
+      "text": "Missing person report! Frantic search for a missing teenager! Family asks for anyone with information about the whereabouts of a young girl  to contact authorities."
+    }
+  },
+  "BasementWeapon": {
+    "0": {
+      "speaker": "Basement",
+      "text": "You went downstairs to the basement, when suddenly Hank attacks you! Luckily you have brought a weapon and are able to counter attack. Hank got scared and runs away!"
+    }
+  },
+  "BasementNoWeapon": {
+    "0": {
+      "speaker": "Basement",
+      "text": "You went to look for items in the basement, but everything went black before your eyes. Hank attacked you and you lose half your health."
+    }
+  }
 }
+
