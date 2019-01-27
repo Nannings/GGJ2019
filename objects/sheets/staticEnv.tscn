@@ -36,7 +36,7 @@ extents = Vector2( 159.623, 158.901 )
 custom_solver_bias = 0.0
 extents = Vector2( 156.064, 157 )
 
-[node name="staticEnv" type="Node" index="0"]
+[node name="staticEnv" type="Node"]
 
 [node name="wall-flat-down" type="Sprite" parent="." index="0"]
 
