@@ -11,8 +11,8 @@ signal dialogueDone
 
 var direction = Vector2()
 var movement = Vector2()
-var speed = 8000 #min = 8000
-var minSpeed = 8000
+var speed = 9000
+var maxSpeed = 9000 #make this heigher if it gets to slow
 var facing = Vector2(0,-1)
 var talking = false
 var flashLightSprite 
@@ -20,12 +20,6 @@ var flashLightSprite2
 var lightDecrease = 100 #less is faster
 var switchLight = false
 var flashLightActive = false;
-
-func changeWeight(amount):
-	speed += amount
-	if speed < 8000:
-		speed = 8000
-	
 
 func _ready():
 	flashLightSprite = flashLight.get_node("flashLightSprite")
@@ -39,8 +33,8 @@ func _ready():
 	pass
 
 func _process(delta):
-	speed = minSpeed - Global.calculateWeight()
-#	print(speed)
+	speed = maxSpeed - Global.calculateWeight()
+	print(speed)
 	
 	if not flashLightActive:
 		flashLightSprite2.visible = true
