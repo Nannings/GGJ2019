@@ -16,9 +16,16 @@ var facing = Vector2(0,-1)
 var talking = false
 var flashLightSprite 
 var lightDecrease = 10000 #less is faster
+var switchLight = false
 
 func _ready():
 	flashLightSprite = flashLight.get_node("flashLightSprite")
+	
+	var startScale = flashLightSprite.scale
+	var tween = get_node("Tween")
+	tween.interpolate_property(flashLightSprite, "scale", startScale, startScale * 1.01, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+	
 	pass
 
 func _process(delta):
@@ -139,3 +146,14 @@ func hsv_lerp(cola, colb, t):
     newcol.h = h
 
     return newcol
+
+func _on_Tween_tween_completed(object, key):
+	var startScale = flashLightSprite.scale
+	var tween = get_node("Tween")
+	if switchLight == true:
+		tween.interpolate_property(flashLightSprite, "scale", startScale, startScale * 1.01, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		switchLight = false
+	else:
+		tween.interpolate_property(flashLightSprite, "scale", startScale, startScale / 1.01, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		switchLight = true;
+	tween.start()
