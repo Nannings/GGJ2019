@@ -95,15 +95,20 @@ func action():
 		
 func pickup(itemName, item):
 	if Input.is_action_pressed("accept") && !talking:
+		
 		for key in Global.ITEMS:
 			if key == itemName:
-				print(Global.ITEMS[key].pickup)
-				if !item.get_owner().has_node("inside"):
-					item.get_owner().queue_free()
+				if Global.values.inv.space.size() != 10:
+					Global.values.inv.space.append(itemName)
+					print(Global.values.inv.space)
+					if !item.get_owner().has_node("inside"):
+						item.get_owner().queue_free()
+					else:
+						item.get_owner().get_node("pickArea").queue_free()
+						if item.get_owner().get_node("inside").visible == true:
+							item.get_owner().get_node("inside").visible = false
 				else:
-					item.get_owner().get_node("pickArea").queue_free()
-					if item.get_owner().get_node("inside").visible == true:
-						item.get_owner().get_node("inside").visible = false
+					pass
 				var dBoxI = dBox.instance()
 				print(Global.ITEMS[key].pickup)
 				dBoxI.ini([],[Global.ITEMS[key].pickup], self)

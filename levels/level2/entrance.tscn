@@ -4,7 +4,7 @@
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
 
-[node name="entrance" type="Node2D"]
+[node name="entrance" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -52,5 +52,9 @@ levelPlusScene = "level2/cell"
 [node name="items" type="Node2D" parent="." index="3"]
 
 [node name="supports" type="Node2D" parent="." index="4"]
+
+[node name="events" type="Node2D" parent="." index="5"]
+
+scale = Vector2( 1, 1 )
 
 

@@ -18,14 +18,13 @@ var screen = 1
 var time = 2000
 
 var values = {
-	day = 1,
-	money = 0,
 	player = {
-		hp = 3,
+		hp = 100,
+		speed = 8000,
+		happi = 0
 	},
 	inv = {
-		space = ["medkit","medkit","medkit","medkit","empty","empty","empty","empty"],
-#		space = ["empty","empty","empty","empty","empty","empty","empty","empty"],
+		space = [],
 	}
 }
 

@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://levels/TransPoint.gd" type="Script" id=1]
+[ext_resource path="res://levels/EventPoint.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 160, 160 )
 
-[node name="transpoint" type="Area2D" index="0"]
+[node name="eventpoint" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -18,7 +18,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-levelPlusScene = null
+eventScene = null
 
 [node name="col" type="CollisionShape2D" parent="." index="0"]
 
