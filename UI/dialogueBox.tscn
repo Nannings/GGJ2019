@@ -135,6 +135,6 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[connection signal="timeout" from="talklessFrames" to="." method="_on_talklessFrames_timeout" flags=3]
+[connection signal="timeout" from="talklessFrames" to="." method="_on_talklessFrames_timeout"]
 
 

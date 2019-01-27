@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/items/table/Table_placeholder (1)-1.png.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 335.994, 203.776 )
+
+[node name="item" type="StaticBody2D" groups=[
+"items",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+region_rect = Rect2( 1084, 912, 0, 24 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="col" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 2.25691, -0.110001 )
+shape = SubResource( 1 )
+
+

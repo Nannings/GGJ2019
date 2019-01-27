@@ -118,7 +118,7 @@ func play_voice(name):
 
 func _on_talklessFrames_timeout():
 	emit_signal("dialogueDone")
-	player.talking = false
+	Global.values.player.talking = false
 	queue_free()
 
 
