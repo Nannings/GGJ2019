@@ -123,4 +123,4 @@ func _on_talklessFrames_timeout():
 
 
 func _on_dialogueBox_dialogueDone():
-	pass # replace with function body
+	print("dia done test")

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/dialogueBox.gd" type="Script" id=1]
 
-[node name="dialogueBox" type="Control"]
+[node name="dialogueBox" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 1.0
@@ -29,7 +29,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 73.0
 margin_top = -31.0
-margin_right = 153.0
+margin_right = 287.0
 margin_bottom = -3.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false

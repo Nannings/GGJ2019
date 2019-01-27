@@ -3,8 +3,6 @@
 [ext_resource path="res://characters/Support.gd" type="Script" id=1]
 [ext_resource path="res://characters/daughter.png" type="Texture" id=2]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -15,7 +13,9 @@ extents = Vector2( 90.9991, 97.9004 )
 custom_solver_bias = 0.0
 radius = 257.045
 
-[node name="daugther" type="KinematicBody2D"]
+[node name="daugther" type="KinematicBody2D" index="0" groups=[
+"take",
+]]
 
 input_pickable = false
 collision_layer = 1

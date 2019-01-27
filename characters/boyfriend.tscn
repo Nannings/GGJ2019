@@ -13,7 +13,9 @@ extents = Vector2( 90.9991, 97.9004 )
 custom_solver_bias = 0.0
 radius = 261.983
 
-[node name="boyfriend" type="KinematicBody2D"]
+[node name="boyfriend" type="KinematicBody2D" index="0" groups=[
+"take",
+]]
 
 input_pickable = false
 collision_layer = 1

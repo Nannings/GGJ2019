@@ -110,7 +110,6 @@ func pickup(itemName, item):
 						dBoxI.ini([],[Global.ITEMS[key].pickup], self)
 						get_tree().get_root().add_child(dBoxI)
 		else:
-			print("test1")
 			itemName = "backpackFull"
 			for key in Global.ITEMS:
 				if key == itemName:
@@ -142,7 +141,7 @@ func event(sceneScript,event):
 	Global.values.player.talking = true
 	for key in Global.TALKS:
 		if key == sceneScript:
-			print("test3") 
+			
 			var speaker = []
 			var dialogue = []
 #			var voices = []

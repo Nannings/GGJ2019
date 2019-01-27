@@ -15,4 +15,3 @@ func _ready():
 func _on_eventpoint_body_entered(body):
 	if body.is_in_group("players"):
 		body.event(eventScene, self)
-		print("test1") 
