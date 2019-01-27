@@ -3,7 +3,7 @@ extends Control
 onready var label = get_node("RichTextLabel")
 onready var timer = get_node("Timer")
 
-export (int) var time = 1000
+var time = 1000
 
 enum TimeFormat {
     FORMAT_HOURS   = 1 << 0,
@@ -11,12 +11,6 @@ enum TimeFormat {
     FORMAT_SECONDS = 1 << 2,
     FORMAT_DEFAULT = FORMAT_HOURS | FORMAT_MINUTES | FORMAT_SECONDS
 }
-
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	
-	pass
 
 func _process(delta):	
 
@@ -27,6 +21,7 @@ func _on_Timer_timeout():
 	time -= 1
 	if time <= 0:
 		print("game over")
+		get_tree().change_scene("res://UI/GameOver.tscn")
 	pass # replace with function body
 	
 func format_time(time, format = FORMAT_DEFAULT, digit_format = "%02d"):
