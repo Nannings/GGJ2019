@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=4]
 
 [node name="kitchen" type="Node2D"]
 
@@ -58,5 +59,11 @@ levelPlusScene = "level1/bathroom"
 position = Vector2( 630.52, 159.005 )
 scale = Vector2( 2, 1 )
 levelPlusScene = "level1/exit"
+
+[node name="Clock" parent="." index="3" instance=ExtResource( 4 )]
+
+margin_right = 1556.0
+margin_bottom = 1050.0
+time = 1000
 
 

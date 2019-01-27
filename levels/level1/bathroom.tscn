@@ -4,9 +4,9 @@
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/items/bandages/bandages.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/items/medkit/medkit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=5]
 
-[node name="kitchen" type="Node2D" index="0"]
+[node name="kitchen" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -46,6 +46,8 @@ levelPlusScene = "level1/hall"
 
 [node name="item" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
+
 [node name="item" parent="item" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 4232.35, 2193.82 )
@@ -55,5 +57,11 @@ position = Vector2( 4232.35, 2193.82 )
 position = Vector2( 4812.53, 167.344 )
 z_index = -1
 _sections_unfolded = [ "Z Index" ]
+
+[node name="Clock" parent="." index="4" instance=ExtResource( 5 )]
+
+margin_right = 1631.0
+margin_bottom = 1110.0
+time = 1000
 
 

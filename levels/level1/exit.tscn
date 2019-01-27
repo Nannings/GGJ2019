@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=4]
 
-[node name="kitchen" type="Node2D" index="0"]
+[node name="kitchen" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -40,5 +41,11 @@ position = Vector2( 2582.59, 3019.78 )
 position = Vector2( 3680.45, 4644.3 )
 scale = Vector2( 3, 1 )
 levelPlusScene = "level1/livingroom"
+
+[node name="Clock" parent="." index="3" instance=ExtResource( 4 )]
+
+margin_right = 1231.0
+margin_bottom = 875.0
+time = 1000
 
 
