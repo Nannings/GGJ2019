@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://characters/boyfriend.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/items/walkie_talkie/talkie.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=7]
 
-[node name="livingroom" type="Node2D"]
+[node name="livingroom" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -62,6 +63,8 @@ position = Vector2( 990.081, 2775.93 )
 
 [node name="trans" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="transpoint" parent="trans" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 4482.42, 954.022 )
@@ -73,5 +76,11 @@ levelPlusScene = "level1/kitchen"
 position = Vector2( 158.667, 1912.36 )
 scale = Vector2( 1, 4 )
 levelPlusScene = "level1/hall"
+
+[node name="Clock" parent="." index="5" instance=ExtResource( 7 )]
+
+margin_right = 1251.0
+margin_bottom = 830.0
+time = 1000
 
 

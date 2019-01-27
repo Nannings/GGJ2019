@@ -3,7 +3,7 @@ extends Control
 onready var label = get_node("RichTextLabel")
 onready var timer = get_node("Timer")
 
-var time = 1000
+export (int) var time = 1000
 
 enum TimeFormat {
     FORMAT_HOURS   = 1 << 0,
