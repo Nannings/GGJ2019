@@ -134,4 +134,9 @@
         "description": "A handgun. This will protect you.",
         "slowdown": 5
     },
+    "lockpicks": {
+        "pickup": "You search the closet and find a set of lockpicks. These will help you unlock doors.",
+        "description": "A set of lockpicks.",
+        "slowdown": 5
+    },
 }
