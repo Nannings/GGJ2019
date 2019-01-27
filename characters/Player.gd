@@ -76,7 +76,14 @@ func pickup(itemName, item):
 		for key in Global.ITEMS:
 			if key == itemName:
 				print(Global.ITEMS[key].pickup)
-				item.get_owner().queue_free()
+				if !item.get_owner().has_node("inside"):
+					print('get it')
+					item.get_owner().queue_free()
+				else:
+					print('leave it') 
+					item.get_owner().get_node("pickArea").queue_free()
+					if item.get_owner().get_node("inside").visble == true:
+						item.get_owner().get_node("inside").visble = false
 				var dBoxI = dBox.instance()
 				print(Global.ITEMS[key].pickup)
 				dBoxI.ini([],[Global.ITEMS[key].pickup], self)
