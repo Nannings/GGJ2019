@@ -105,7 +105,7 @@
         "slowdown": 2
     },
     "bagpack": {
-        "pickup": "It's your bagpack. It can hold everything you need to take with me.",
+        "pickup": "It's your bagpack. It can hold everything you need to take with you.",
         "description": "It's my bagpack.",
         "slowdown": 0
     },
