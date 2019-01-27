@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Apple_placeholder-1.png.png-3c432ffeb764f6fcb0c4cf46e643ccf3.stex"
+path="res://.import/Apple_placeholder-1.png-db51a27c2a3e6d0ca8323608da4db3e7.stex"
 
 [deps]
 
-source_file="res://objects/items/apple/Apple_placeholder-1.png.png"
-dest_files=[ "res://.import/Apple_placeholder-1.png.png-3c432ffeb764f6fcb0c4cf46e643ccf3.stex" ]
+source_file="res://objects/items/apple_in_closet/Apple_placeholder-1.png"
+dest_files=[ "res://.import/Apple_placeholder-1.png-db51a27c2a3e6d0ca8323608da4db3e7.stex" ]
 
 [params]
 
