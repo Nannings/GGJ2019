@@ -34,7 +34,7 @@ func _ready():
 
 func _process(delta):
 	speed = maxSpeed - Global.calculateWeight()
-	print(speed)
+#	print(speed)
 	
 	if not flashLightActive:
 		flashLightSprite2.visible = true
