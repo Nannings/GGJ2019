@@ -139,4 +139,9 @@
         "description": "A set of lockpicks.",
         "slowdown": 5
     },
+    "policePic": {
+        "pickup": "You search the closet and find a piece of police evidence.",
+        "description": "A crimescene photo.",
+        "slowdown": 5
+    },
 }
