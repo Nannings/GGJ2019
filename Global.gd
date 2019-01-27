@@ -15,6 +15,7 @@ var scene
 
 var level = 1
 var screen = 1
+var time = 800
 
 var values = {
 	day = 1,

@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/items/bandages/bandages.tscn" type="PackedScene" id=4]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/items/medkit/medkit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=6]
 
-[node name="kitchen" type="Node2D"]
+[node name="kitchen" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -36,6 +37,7 @@ _sections_unfolded = [ "Cell", "Collision", "Z Index" ]
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
+visible = false
 position = Vector2( 4762.42, 1463.53 )
 
 [node name="transpoint" parent="." index="2" instance=ExtResource( 3 )]
@@ -46,22 +48,17 @@ levelPlusScene = "level1/hall"
 
 [node name="item" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="item" parent="item" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 4232.35, 2193.82 )
 
-[node name="item2" parent="item" index="1" instance=ExtResource( 5 )]
+[node name="medkit" parent="item" index="1" instance=ExtResource( 5 )]
 
-position = Vector2( 4812.53, 167.344 )
-z_index = -1
-_sections_unfolded = [ "Z Index" ]
+position = Vector2( 4451.04, 150.316 )
 
-[node name="Clock" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Clock" parent="." index="4" instance=ExtResource( 6 )]
 
 margin_right = 1631.0
 margin_bottom = 1110.0
-time = 1000
 
 
