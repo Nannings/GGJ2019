@@ -159,6 +159,7 @@ shape = SubResource( 6 )
 [node name="flashLight" type="Node2D" parent="." index="2"]
 
 editor/display_folded = true
+visible = false
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true

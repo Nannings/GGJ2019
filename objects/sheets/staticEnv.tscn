@@ -9,7 +9,7 @@
 [ext_resource path="res://objects/sheets/wall.png" type="Texture" id=7]
 [ext_resource path="res://objects/sheets/pc.png" type="Texture" id=8]
 [ext_resource path="res://objects/sheets/couch.png" type="Texture" id=9]
-[ext_resource path="res://objects/sheets/Floors/FloorTexture_Wood_Cold.png" type="Texture" id=10]
+[ext_resource path="res://objects/sheets/couch1.png" type="Texture" id=10]
 [ext_resource path="res://objects/sheets/Floors/FloorTexture_Wood_Warm.png" type="Texture" id=11]
 [ext_resource path="res://objects/sheets/Floors/FloorTexture_CheckeredTile_Blue.png" type="Texture" id=12]
 [ext_resource path="res://objects/sheets/Floors/FloorTexture_CheckeredTile_Gray.png" type="Texture" id=13]
@@ -31,7 +31,7 @@ extents = Vector2( 159.623, 158.901 )
 custom_solver_bias = 0.0
 extents = Vector2( 156.064, 157 )
 
-[node name="staticEnv" type="Node"]
+[node name="staticEnv" type="Node" index="0"]
 
 [node name="wall-flat-down" type="Sprite" parent="." index="0"]
 
@@ -127,7 +127,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="wall" type="Sprite" parent="." index="6"]
 
-editor/display_folded = true
 texture = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
@@ -169,49 +168,83 @@ shape = SubResource( 1 )
 
 [node name="couch" type="Sprite" parent="." index="8"]
 
+editor/display_folded = true
 texture = ExtResource( 9 )
 
-[node name="floor1" type="Sprite" parent="." index="9"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="couch" index="0"]
 
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="couch/StaticBody2D2" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="couch2" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
 texture = ExtResource( 10 )
 
-[node name="floor2" type="Sprite" parent="." index="10"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="couch2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="couch2/StaticBody2D2" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="floor1" type="Sprite" parent="." index="10"]
+
+texture = ExtResource( 9 )
+
+[node name="floor2" type="Sprite" parent="." index="11"]
 
 texture = ExtResource( 11 )
 
-[node name="floor3" type="Sprite" parent="." index="11"]
+[node name="floor3" type="Sprite" parent="." index="12"]
 
 texture = ExtResource( 12 )
 
-[node name="floor4" type="Sprite" parent="." index="12"]
+[node name="floor4" type="Sprite" parent="." index="13"]
 
 texture = ExtResource( 13 )
 
-[node name="floor5" type="Sprite" parent="." index="13"]
+[node name="floor5" type="Sprite" parent="." index="14"]
 
 texture = ExtResource( 14 )
 
-[node name="floor6" type="Sprite" parent="." index="14"]
+[node name="floor6" type="Sprite" parent="." index="15"]
 
 texture = ExtResource( 15 )
 
-[node name="door" type="Sprite" parent="." index="15"]
+[node name="door" type="Sprite" parent="." index="16"]
 
 texture = ExtResource( 16 )
 
-[node name="exit" type="Sprite" parent="." index="16"]
+[node name="exit" type="Sprite" parent="." index="17"]
 
 texture = ExtResource( 17 )
 
-[node name="picture1" type="Sprite" parent="." index="17"]
+[node name="picture1" type="Sprite" parent="." index="18"]
 
 texture = ExtResource( 18 )
 
-[node name="picture2" type="Sprite" parent="." index="18"]
+[node name="picture2" type="Sprite" parent="." index="19"]
 
 texture = ExtResource( 19 )
 
-[node name="shadowblock" type="Sprite" parent="." index="19"]
+[node name="shadowblock" type="Sprite" parent="." index="20"]
 
 editor/display_folded = true
 texture = ExtResource( 20 )
