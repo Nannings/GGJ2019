@@ -1,20 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://objects/items/couch1/couch1.png" type="Texture" id=1]
+[ext_resource path="res://objects/items/bed/bed_scaled.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
-[ext_resource path="res://objects/items/couch1/childToy.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 12.35 )
+extents = Vector2( 184.233, 310.55 )
 
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 252.264
+radius = 370.982
 
-[node name="coat" type="StaticBody2D" groups=[
+[node name="item" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -34,8 +33,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -29.1848, 31.8016 )
-scale = Vector2( 10.3423, 12.8476 )
+position = Vector2( -6.50696, 39.0425 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
@@ -48,16 +46,10 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
-itemName = "childToy"
+itemName = "bandages"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
-position = Vector2( -25.0527, 23.3826 )
 shape = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="pickArea/col" index="0"]
-
-visible = false
-texture = ExtResource( 3 )
 
 
