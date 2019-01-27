@@ -10,7 +10,7 @@
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=9]
 
-[node name="livingroom" type="Node2D" index="0"]
+[node name="livingroom" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -58,6 +58,8 @@ position = Vector2( 1754.88, 3367.46 )
 position = Vector2( 1768.48, 3990 )
 
 [node name="items" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="item" parent="items" index="0" instance=ExtResource( 5 )]
 

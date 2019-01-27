@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-b4700ef0cd4aac06b6fde7d08489f5ce.stex"
+path="res://.import/smoke_particle.png-357f0096c701df17b06d87a710eea1b2.stex"
 
 [deps]
 
-source_file="res://UI/titlescreen/icon.png"
-dest_files=[ "res://.import/icon.png-b4700ef0cd4aac06b6fde7d08489f5ce.stex" ]
+source_file="res://UI/titlescreen2/smoke_particle.png"
+dest_files=[ "res://.import/smoke_particle.png-357f0096c701df17b06d87a710eea1b2.stex" ]
 
 [params]
 

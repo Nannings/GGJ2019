@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mask.png-f6083b115ef4d2ab4eb8b31824cfbc1f.stex"
+path="res://.import/mask.png-e973206e833e259493660fbcfcb4e7df.stex"
 
 [deps]
 
-source_file="res://UI/titlescreen/mask.png"
-dest_files=[ "res://.import/mask.png-f6083b115ef4d2ab4eb8b31824cfbc1f.stex" ]
+source_file="res://UI/titlescreen2/mask.png"
+dest_files=[ "res://.import/mask.png-e973206e833e259493660fbcfcb4e7df.stex" ]
 
 [params]
 
