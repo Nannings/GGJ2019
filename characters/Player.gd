@@ -11,7 +11,7 @@ signal dialogueDone
 
 var direction = Vector2()
 var movement = Vector2()
-var speed = 8000
+var speed = 8000 #min = 8000
 var facing = Vector2(0,-1)
 var talking = false
 var flashLightSprite 
@@ -79,7 +79,7 @@ func pickup(itemName, item):
 				item.get_owner().queue_free()
 				var dBoxI = dBox.instance()
 				print(Global.ITEMS[key].pickup)
-				dBoxI.ini([],[Global.ITEMS[key].pickup], [], self)
+				dBoxI.ini([],[Global.ITEMS[key].pickup], self)
 				get_tree().get_root().add_child(dBoxI)
 	  
 		

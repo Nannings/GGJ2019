@@ -1,17 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://objects/items/apple/Apple_placeholder-1.png.png" type="Texture" id=1]
+[ext_resource path="res://objects/items/apple/Refridgerator_placeholder-1.png.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
+[ext_resource path="res://objects/items/apple/Apple_placeholder-1.png.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 147.24
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 340.582
+extents = Vector2( 11.2936, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 229.655, 16.2316 )
 
 [node name="item" type="StaticBody2D" index="0" groups=[
 "items",
@@ -33,6 +34,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( -0.370049, -3.16683 )
+scale = Vector2( 13.5594, 30.942 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
@@ -49,6 +52,13 @@ itemName = "apple"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
+position = Vector2( -2.29474, 15.2399 )
+scale = Vector2( 1.23664, 25.9157 )
 shape = SubResource( 2 )
+
+[node name="inside" type="Sprite" parent="." index="3"]
+
+visible = false
+texture = ExtResource( 3 )
 
 

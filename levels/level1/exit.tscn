@@ -4,7 +4,7 @@
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
 
-[node name="kitchen" type="Node2D"]
+[node name="kitchen" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
@@ -32,7 +32,7 @@ _sections_unfolded = [ "Cell", "Collision" ]
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 2648.49, 2948.61 )
+position = Vector2( 4434.33, 3883.17 )
 
 [node name="transpoint" parent="." index="2" instance=ExtResource( 3 )]
 

@@ -11,7 +11,7 @@ radius = 156.401
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 323.337
+radius = 302.793
 
 [node name="item" type="StaticBody2D" index="0" groups=[
 "items",
