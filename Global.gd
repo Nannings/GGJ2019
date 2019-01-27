@@ -15,7 +15,7 @@ var scene
 
 var level = 1
 var screen = 1
-var time = 2000
+var time = 2000 #2000
 
 var values = {
 	player = {
@@ -35,6 +35,13 @@ func getWeightOfItem(name):
 #			print(ITEMS[item].slowdown)
 			return(ITEMS[item].slowdown)
 	return 0
+
+func countItems():
+	var count = 0;
+	for item in Global.values.inv.space:
+		if item != "empty":
+			count += 1
+	return count
 
 func calculateWeight():
 #	print(Global.values.inv)
