@@ -48,7 +48,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
-itemName = "sceneScript"
+itemName = "lockpicks"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 

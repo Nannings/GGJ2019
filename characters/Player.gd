@@ -15,11 +15,14 @@ var speed = 8000 #min = 8000
 var facing = Vector2(0,-1)
 var talking = false
 var flashLightSprite 
-var lightDecrease = 10000 #less is faster
+var flashLightSprite2
+var lightDecrease = 10 #less is faster
 var switchLight = false
+var flashLightActive = false;
 
 func _ready():
 	flashLightSprite = flashLight.get_node("flashLightSprite")
+	flashLightSprite2 = flashLight.get_node("flashLightSprite2")
 	
 	var startScale = flashLightSprite.scale
 	var tween = get_node("Tween")
@@ -29,7 +32,16 @@ func _ready():
 	pass
 
 func _process(delta):
-	battery -= delta / lightDecrease
+	
+	if not flashLightActive:
+		flashLightSprite2.visible = true
+		flashLightSprite.visible = false
+	elif Input.is_key_pressed(KEY_K) && battery < 1 :
+		flashLightSprite2.visible = false
+		flashLightSprite.visible = true
+		battery += delta / lightDecrease 
+	else:
+		battery -= delta / lightDecrease
 	flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
 
 func _physics_process(delta):

@@ -1,17 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://objects/items/pic_loved_one/Picture_LovedOnes_placeholder-1.png.png" type="Texture" id=1]
+[ext_resource path="res://objects/items/pic_loved_one/Table_placeholder-2.png (1).png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
+[ext_resource path="res://objects/items/pic_loved_one/Picture_LovedOnes_placeholder-1.png.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 160.361
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 364.194
+extents = Vector2( 200.158, 9.65236 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.2006, 35.2844 )
 
 [node name="item" type="StaticBody2D" index="0" groups=[
 "items",
@@ -33,6 +34,9 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
+visible = false
+position = Vector2( 21.4059, -2.58391 )
+scale = Vector2( 0.894634, 33.4245 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
@@ -49,6 +53,13 @@ itemName = "picLovedOne"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
+position = Vector2( 85.5621, -17.5441 )
+scale = Vector2( 12.3861, 11.8449 )
 shape = SubResource( 2 )
+
+[node name="inside" type="Sprite" parent="." index="3"]
+
+position = Vector2( 18.9739, -3.7948 )
+texture = ExtResource( 3 )
 
 
