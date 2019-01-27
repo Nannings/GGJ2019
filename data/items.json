@@ -20,12 +20,12 @@
         "slowdown": 5
     },
     "apple": {
-        "pickup": "It's an apple",
+        "pickup": "You look in the refrigerator and find an apple",
         "description": "Eat it and it will restore some of your health.",
         "slowdown": 2
     },
     "sandwich": {
-        "pickup": "It's a nice tunna sandwich",
+        "pickup": "It's a nice tuna sandwich",
         "description": "Eat it and it will restore half your health.",
         "slowdown": 5
     },
@@ -35,7 +35,7 @@
         "slowdown": 5
     },
     "childToy": {
-        "pickup": "It's a toy from your childhood. It means a lot to you.",
+        "pickup": "You look behind the couch and find a toy from your childhood. It means a lot to you.",
         "description": "It reminds you of a better time.",
         "slowdown": 15
     },
@@ -65,7 +65,7 @@
         "slowdown": 10
     },
     "book": {
-        "pickup": "It's your favorite book. You've read it a thousand times and still can't get enough of it. It means a lot to you.",
+        "pickup": "You search the bookcase and find your favorite book. You've read it a thousand times and still can't get enough of it. It means a lot to you.",
         "description": "It's your alltime favorite book.",
         "slowdown": 10
     },
@@ -128,5 +128,10 @@
         "pickup": "It's a gold ring. It appears to be stolen",
         "description": "A stolen ring.",
         "slowdown": 2
+    },
+    "gun": {
+        "pickup": "You search the closet and find your handgun.",
+        "description": "A handgun. This will protect you.",
+        "slowdown": 5
     },
 }
