@@ -21,7 +21,8 @@ var values = {
 	player = {
 		hp = 100,
 		speed = 8000,
-		happi = 0
+		happi = 0,
+		talking = false
 	},
 	inv = {
 		space = [],

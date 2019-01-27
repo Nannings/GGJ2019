@@ -14,7 +14,6 @@ var movement = Vector2()
 var speed = 9000
 var maxSpeed = 9000 #make this heigher if it gets to slow
 var facing = Vector2(0,-1)
-var talking = false
 var flashLightSprite 
 var flashLightSprite2
 var lightDecrease = 100 #less is faster
@@ -94,30 +93,37 @@ func action():
 	pass
 		
 func pickup(itemName, item):
-	if Input.is_action_pressed("accept") && !talking:
-		
-		for key in Global.ITEMS:
-			if key == itemName:
-				if Global.values.inv.space.size() != 10:
-					Global.values.inv.space.append(itemName)
-					print(Global.values.inv.space)
-					if !item.get_owner().has_node("inside"):
-						item.get_owner().queue_free()
-					else:
-						item.get_owner().get_node("pickArea").queue_free()
-						if item.get_owner().get_node("inside").visible == true:
-							item.get_owner().get_node("inside").visible = false
-				else:
-					pass
-				var dBoxI = dBox.instance()
-				print(Global.ITEMS[key].pickup)
-				dBoxI.ini([],[Global.ITEMS[key].pickup], self)
-				get_tree().get_root().add_child(dBoxI)
+	if Input.is_action_pressed("accept") && !Global.values.player.talking:
+		print("test1")
+		if Global.values.inv.space.size() != 1:
+			for key in Global.ITEMS:
+				if key == itemName:
+						Global.values.inv.space.append(itemName)
+						print(Global.values.inv.space)
+						if !item.get_owner().has_node("inside"):
+							item.get_owner().queue_free()
+						else:
+							item.get_owner().get_node("pickArea").queue_free()
+							if item.get_owner().get_node("inside").visible == true:
+								item.get_owner().get_node("inside").visible = false
+						var dBoxI = dBox.instance()
+						print(Global.ITEMS[key].pickup)
+						dBoxI.ini([],[Global.ITEMS[key].pickup], self)
+						get_tree().get_root().add_child(dBoxI)
+		else:
+			itemName = "backpackFull"
+			for key in Global.ITEMS:
+				if key == itemName:
+					print(Global.values.inv.space)				
+					var dBoxI = dBox.instance()
+					print(Global.ITEMS[key].pickup)
+					dBoxI.ini([],[Global.ITEMS[key].pickup], self)
+					get_tree().get_root().add_child(dBoxI)
 	  
 		
 func talk(sceneScript):
-	if Input.is_action_pressed("accept") && !talking:
-		talking = true
+	if Input.is_action_pressed("accept") && !Global.values.player.talking:
+		Global.values.player.talking = true
 		for key in Global.TALKS:
 			if key == sceneScript:
 				var speaker = []
@@ -135,8 +141,6 @@ func talk(sceneScript):
 #lower speed by 5% for 1 kg
 func doneTalking():
 	print("test")
-	talking = false
-
 
 func hsv_lerp(cola, colb, t):
     #This part will flip the direction of the lerp if the two colors are above

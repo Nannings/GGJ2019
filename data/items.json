@@ -30,7 +30,7 @@
         "slowdown": 5
     },
     "talkie": {
-        "pickup": "I hear a static sound coming from it.",
+        "pickup": "You hear a static sound coming from it.",
         "description": "This item will give you hint on your journey",
         "slowdown": 5
     },
@@ -143,5 +143,5 @@
         "pickup": "You search the closet and find a piece of police evidence.",
         "description": "A crimescene photo.",
         "slowdown": 5
-    },
+    }
 }
