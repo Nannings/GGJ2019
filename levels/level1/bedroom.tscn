@@ -32,7 +32,8 @@ _sections_unfolded = [ "Cell", "Collision" ]
 
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 2648.49, 2948.61 )
+visible = false
+position = Vector2( 4434.33, 3883.17 )
 
 [node name="transpoint" parent="." index="2" instance=ExtResource( 3 )]
 

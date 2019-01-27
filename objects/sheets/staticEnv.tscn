@@ -4,28 +4,32 @@
 [ext_resource path="res://objects/sheets/wall90.png" type="Texture" id=2]
 [ext_resource path="res://objects/sheets/wall180.png" type="Texture" id=3]
 [ext_resource path="res://objects/sheets/wall270.png" type="Texture" id=4]
-[ext_resource path="res://objects/sheets/door.png" type="Texture" id=5]
-[ext_resource path="res://objects/sheets/door180.png" type="Texture" id=6]
-[ext_resource path="res://objects/sheets/door270.png" type="Texture" id=7]
-[ext_resource path="res://objects/sheets/door90.png" type="Texture" id=8]
-[ext_resource path="res://objects/sheets/wall.png" type="Texture" id=9]
-[ext_resource path="res://objects/sheets/pc.png" type="Texture" id=10]
-[ext_resource path="res://objects/sheets/couch.png" type="Texture" id=11]
-[ext_resource path="res://objects/sheets/Floors/FloorTexture_Wood_Cold.png" type="Texture" id=12]
-[ext_resource path="res://objects/sheets/Floors/FloorTexture_Wood_Warm.png" type="Texture" id=13]
-[ext_resource path="res://objects/sheets/Floors/FloorTexture_CheckeredTile_Blue.png" type="Texture" id=14]
-[ext_resource path="res://objects/sheets/Floors/FloorTexture_CheckeredTile_Gray.png" type="Texture" id=15]
-[ext_resource path="res://objects/sheets/Floors/FloorTexture_Tiles_Airport.png" type="Texture" id=16]
-[ext_resource path="res://objects/sheets/Floors/FloorTiles_Clean_Bathroom.png" type="Texture" id=17]
-[ext_resource path="res://objects/sheets/dooropen.png" type="Texture" id=18]
-[ext_resource path="res://objects/sheets/exit sign-1.png.png" type="Texture" id=19]
-[ext_resource path="res://objects/sheets/Picture_LovedOnes_placeholder.png" type="Texture" id=20]
-[ext_resource path="res://objects/sheets/Picture_placeholder.png" type="Texture" id=21]
+[ext_resource path="res://objects/sheets/door180.png" type="Texture" id=5]
+[ext_resource path="res://objects/sheets/door270.png" type="Texture" id=6]
+[ext_resource path="res://objects/sheets/wall.png" type="Texture" id=7]
+[ext_resource path="res://objects/sheets/pc.png" type="Texture" id=8]
+[ext_resource path="res://objects/sheets/couch.png" type="Texture" id=9]
+[ext_resource path="res://objects/sheets/Floors/FloorTexture_Wood_Cold.png" type="Texture" id=10]
+[ext_resource path="res://objects/sheets/Floors/FloorTexture_Wood_Warm.png" type="Texture" id=11]
+[ext_resource path="res://objects/sheets/Floors/FloorTexture_CheckeredTile_Blue.png" type="Texture" id=12]
+[ext_resource path="res://objects/sheets/Floors/FloorTexture_CheckeredTile_Gray.png" type="Texture" id=13]
+[ext_resource path="res://objects/sheets/Floors/FloorTexture_Tiles_Airport.png" type="Texture" id=14]
+[ext_resource path="res://objects/sheets/Floors/FloorTiles_Clean_Bathroom.png" type="Texture" id=15]
+[ext_resource path="res://objects/sheets/dooropen.png" type="Texture" id=16]
+[ext_resource path="res://objects/sheets/exit sign-1.png.png" type="Texture" id=17]
+[ext_resource path="res://objects/sheets/Picture_LovedOnes_placeholder.png" type="Texture" id=18]
+[ext_resource path="res://objects/sheets/Picture_placeholder.png" type="Texture" id=19]
+[ext_resource path="res://objects/sheets/shadowBlock.png" type="Texture" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 159.623, 158.901 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 156.064, 157 )
 
 [node name="staticEnv" type="Node"]
 
@@ -111,94 +115,20 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="door-up" type="Sprite" parent="." index="4"]
+[node name="door-down" type="Sprite" parent="." index="4"]
 
-editor/display_folded = true
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="door-up" index="0"]
+[node name="door-left" type="Sprite" parent="." index="5"]
 
-editor/display_folded = true
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door-up/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="door-down" type="Sprite" parent="." index="5"]
-
-editor/display_folded = true
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="door-down" index="0"]
-
-editor/display_folded = true
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door-down/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="door-left" type="Sprite" parent="." index="6"]
+[node name="wall" type="Sprite" parent="." index="6"]
 
 editor/display_folded = true
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="door-left" index="0"]
-
-editor/display_folded = true
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door-left/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="door-right" type="Sprite" parent="." index="7"]
-
-editor/display_folded = true
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="door-right" index="0"]
-
-editor/display_folded = true
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="door-right/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="wall" type="Sprite" parent="." index="8"]
-
-editor/display_folded = true
-texture = ExtResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="wall" index="0"]
@@ -216,10 +146,10 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="pc" type="Sprite" parent="." index="9"]
+[node name="pc" type="Sprite" parent="." index="7"]
 
 editor/display_folded = true
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="pc" index="0"]
@@ -237,48 +167,68 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="couch" type="Sprite" parent="." index="10"]
+[node name="couch" type="Sprite" parent="." index="8"]
+
+texture = ExtResource( 9 )
+
+[node name="floor1" type="Sprite" parent="." index="9"]
+
+texture = ExtResource( 10 )
+
+[node name="floor2" type="Sprite" parent="." index="10"]
 
 texture = ExtResource( 11 )
 
-[node name="floor1" type="Sprite" parent="." index="11"]
+[node name="floor3" type="Sprite" parent="." index="11"]
 
 texture = ExtResource( 12 )
 
-[node name="floor2" type="Sprite" parent="." index="12"]
+[node name="floor4" type="Sprite" parent="." index="12"]
 
 texture = ExtResource( 13 )
 
-[node name="floor3" type="Sprite" parent="." index="13"]
+[node name="floor5" type="Sprite" parent="." index="13"]
 
 texture = ExtResource( 14 )
 
-[node name="floor4" type="Sprite" parent="." index="14"]
+[node name="floor6" type="Sprite" parent="." index="14"]
 
 texture = ExtResource( 15 )
 
-[node name="floor5" type="Sprite" parent="." index="15"]
+[node name="door" type="Sprite" parent="." index="15"]
 
 texture = ExtResource( 16 )
 
-[node name="floor6" type="Sprite" parent="." index="16"]
+[node name="exit" type="Sprite" parent="." index="16"]
 
 texture = ExtResource( 17 )
 
-[node name="door" type="Sprite" parent="." index="17"]
+[node name="picture1" type="Sprite" parent="." index="17"]
 
 texture = ExtResource( 18 )
 
-[node name="exit" type="Sprite" parent="." index="18"]
+[node name="picture2" type="Sprite" parent="." index="18"]
 
 texture = ExtResource( 19 )
 
-[node name="picture1" type="Sprite" parent="." index="19"]
+[node name="shadowblock" type="Sprite" parent="." index="19"]
 
+editor/display_folded = true
 texture = ExtResource( 20 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="picture2" type="Sprite" parent="." index="20"]
+[node name="StaticBody2D" type="StaticBody2D" parent="shadowblock" index="0"]
 
-texture = ExtResource( 21 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shadowblock/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
 
 
