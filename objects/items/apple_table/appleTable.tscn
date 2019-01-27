@@ -1,18 +1,18 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://objects/items/pic_closet/box (1).png" type="Texture" id=1]
+[ext_resource path="res://objects/items/apple_table/Table_placeholder (1)-1.png.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
-[ext_resource path="res://objects/items/pic_closet/picScaled.png" type="Texture" id=3]
+[ext_resource path="res://objects/items/apple_in_fridge/Apple_placeholder-1.png.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 11.2936, 10 )
+extents = Vector2( 24.3465, 5.05846 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 188.196, 16.2316 )
+extents = Vector2( 331.618, 10.0527 )
 
 [node name="item" type="StaticBody2D" index="0" groups=[
 "items",
@@ -28,16 +28,14 @@ bounce = 0.0
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
-position = Vector2( -58.7889, -42.3921 )
-scale = Vector2( 1.36743, 1.26495 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 1084, 912, 0, 24 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -42.2127, 49.5091 )
-scale = Vector2( 13.5594, 13.6257 )
+position = Vector2( -0.370049, -3.16683 )
+scale = Vector2( 13.5594, 30.942 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
@@ -50,17 +48,17 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
-itemName = "policePic"
+itemName = "apple"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
-position = Vector2( -35.6166, 41.1408 )
-scale = Vector2( 1.23664, 15.1575 )
+position = Vector2( -2.29474, 15.2399 )
+scale = Vector2( 1.23664, 25.9157 )
 shape = SubResource( 2 )
 
 [node name="inside" type="Sprite" parent="." index="3"]
 
-visible = false
+position = Vector2( 2.51746, -183.78 )
 texture = ExtResource( 3 )
 
 
