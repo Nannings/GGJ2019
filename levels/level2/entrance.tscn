@@ -87,6 +87,7 @@ levelPlusScene = "level2/cell"
 
 [node name="supports" type="Node2D" parent="." index="5"]
 
+<<<<<<< HEAD
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="6"]
 
 stream = ExtResource( 6 )
@@ -97,7 +98,8 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+=======
+scale = Vector2( 1, 1 )
+>>>>>>> 4ce4917f85c870300e74b150d3f712ba4e422399
 
 [node name="events" type="Node2D" parent="." index="7"]
-
-
