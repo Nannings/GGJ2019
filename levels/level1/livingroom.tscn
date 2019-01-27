@@ -11,12 +11,12 @@
 [node name="livingroom" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
+[node name="static" type="TileMap" parent="." index="0"]
 
 z_index = -1
 mode = 0
