@@ -149,6 +149,25 @@ func talk(sceneScript):
 	
 				dBoxI.ini(speaker, dialogue, self)
 				get_tree().get_root().add_child(dBoxI)
+				
+func event(sceneScript,event):
+	Global.values.player.talking = true
+	for key in Global.TALKS:
+		if key == sceneScript:
+			print("test3") 
+			var speaker = []
+			var dialogue = []
+#			var voices = []
+			for sent in Global.TALKS[key]:
+				speaker.append(Global.TALKS[key][sent].speaker)
+				dialogue.append(Global.TALKS[key][sent].text)
+#				voices.append(Global.TALKS[key][sent].voice)
+			var dBoxI = dBox.instance()
+			dBoxI.ini(speaker, dialogue, self)
+			get_tree().get_root().add_child(dBoxI)
+			event.queue_free()
+			
+			
 
 #lower speed by 5% for 1 kg
 func doneTalking():

@@ -3,10 +3,10 @@
 [ext_resource path="res://objects/items/locker/Locker.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-radius = 30.0
+extents = Vector2( 156.479, 307.846 )
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -33,11 +33,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
 
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
