@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cutscene 2 grenade.wav-31ab7554972a05e1954aed28a4eb063b.sample"
+
+[deps]
+
+source_file="res://audio/cutscene 2 grenade.wav"
+dest_files=[ "res://.import/cutscene 2 grenade.wav-31ab7554972a05e1954aed28a4eb063b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
