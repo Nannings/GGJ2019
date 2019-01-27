@@ -8,7 +8,7 @@
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=7]
 
-[node name="livingroom" type="Node2D" index="0"]
+[node name="livingroom" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -81,6 +81,5 @@ levelPlusScene = "level1/hall"
 
 margin_right = 1251.0
 margin_bottom = 830.0
-time = 1000
 
 
