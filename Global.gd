@@ -80,7 +80,7 @@ func loadJSON():
 func _deferred_gotoScene(path):
 	print(path)
 	scene.free()
-
+	
 	var res = ResourceLoader.load(path)
 	scene = res.instance()
 	root.add_child(scene)

@@ -9,6 +9,8 @@
 [ext_resource path="res://objects/items/necklace/necklace.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=8]
 
+
+
 [node name="kitchen" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )

@@ -8,6 +8,8 @@
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/items/apple_in_fridge/apple.tscn" type="PackedScene" id=7]
 
+
+
 [node name="entrance" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
