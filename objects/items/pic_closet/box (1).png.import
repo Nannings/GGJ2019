@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cabinet_scaled.png-624242c01c7a60b8b8297d3de8e4dc54.stex"
+path="res://.import/box (1).png-d2406d855b0e55761750e1560f71deb3.stex"
 
 [deps]
 
-source_file="res://objects/items/pic_closet/cabinet_scaled.png"
-dest_files=[ "res://.import/cabinet_scaled.png-624242c01c7a60b8b8297d3de8e4dc54.stex" ]
+source_file="res://objects/items/pic_closet/box (1).png"
+dest_files=[ "res://.import/box (1).png-d2406d855b0e55761750e1560f71deb3.stex" ]
 
 [params]
 

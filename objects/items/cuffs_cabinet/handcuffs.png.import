@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/box (1).png-e1b750a88d73217802025b40923780a1.stex"
+path="res://.import/handcuffs.png-473ffd5cf015d6ff937592089d9d27e6.stex"
 
 [deps]
 
-source_file="res://objects/items/pic_box/box (1).png"
-dest_files=[ "res://.import/box (1).png-e1b750a88d73217802025b40923780a1.stex" ]
+source_file="res://objects/items/cuffs_cabinet/handcuffs.png"
+dest_files=[ "res://.import/handcuffs.png-473ffd5cf015d6ff937592089d9d27e6.stex" ]
 
 [params]
 

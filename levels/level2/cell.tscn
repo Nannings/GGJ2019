@@ -4,7 +4,7 @@
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
 
-[node name="entrance" type="Node2D" index="0"]
+[node name="entrance" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -63,13 +63,14 @@ position = Vector2( 3007.34, 1253.66 )
 
 position = Vector2( 2557.78, 1759.59 )
 scale = Vector2( 2, 1 )
-levelPlusScene = "level1/entrance"
+levelPlusScene = "level2/entrance"
 
 [node name="transpoint2" parent="transports" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 1443.4, 1275.1 )
 scale = Vector2( 1, 2 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+levelPlusScene = "level2/trader"
 
 [node name="items" type="Node2D" parent="." index="4"]
 
