@@ -84,6 +84,8 @@ position = Vector2( 1768.48, 3990 )
 
 [node name="items" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="item" parent="items" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 990.081, 2775.93 )

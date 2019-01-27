@@ -99,6 +99,17 @@ flat = true
 align = 1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 
