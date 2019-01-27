@@ -19,8 +19,7 @@ func _on_Timer_timeout():
 	Global.time -= 1
 	if Global.time <= 0:
 		print("game over")
-		get_tree().change_scene("res://UI/GameOver.tscn")
-	pass # replace with function body
+		Global.gotoScene("res://UI/GameOver.tscn")
 	
 func format_time(time, format = FORMAT_DEFAULT, digit_format = "%02d"):
 	var digits = []

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ever17.wav-a4dbce16b2ae4155b8f0f7338b4a71d4.sample"
+
+[deps]
+
+source_file="res://characters/sounds/bg/ever17.wav"
+dest_files=[ "res://.import/ever17.wav-a4dbce16b2ae4155b8f0f7338b4a71d4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0
