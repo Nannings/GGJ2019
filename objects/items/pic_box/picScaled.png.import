@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Refridgerator_placeholder-1.png.png-5d2c53764f9c17c40d5e6d98cdf6204b.stex"
+path="res://.import/picScaled.png-77bd7a05a8051f319eef825092c4a655.stex"
 
 [deps]
 
-source_file="res://objects/items/apple/Refridgerator_placeholder-1.png.png"
-dest_files=[ "res://.import/Refridgerator_placeholder-1.png.png-5d2c53764f9c17c40d5e6d98cdf6204b.stex" ]
+source_file="res://objects/items/pic_box/picScaled.png"
+dest_files=[ "res://.import/picScaled.png-77bd7a05a8051f319eef825092c4a655.stex" ]
 
 [params]
 
