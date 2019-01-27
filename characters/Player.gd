@@ -43,9 +43,6 @@ func _process(delta):
 		else:
 			flashLightSprite2.visible = false
 			flashLightSprite.visible = true
-		
-	
-	print(flashLightActive)
 	
 	if not flashLightActive:
 		flashLightSprite2.visible = true
