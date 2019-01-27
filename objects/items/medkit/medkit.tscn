@@ -1,19 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://placeholders/PNG/Items/platformPack_item009.png" type="Texture" id=1]
+[ext_resource path="res://objects/items/medkit/Cabinet_placeholder-1.png.png" type="Texture" id=1]
 [ext_resource path="res://objects/pickArea.gd" type="Script" id=2]
+[ext_resource path="res://objects/items/medkit/Item 1 - medkit-1.png.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 30.0
-
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 70.7107
+extents = Vector2( 160.649, 10 )
 
-[node name="item" type="StaticBody2D" groups=[
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.76667, 252.328 )
+
+[node name="item" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -33,7 +34,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col" type="CollisionShape2D" parent="." index="1"]
 
-visible = false
+position = Vector2( 4.94787, -9.04065 )
+scale = Vector2( 0.984934, 15.6989 )
 shape = SubResource( 1 )
 
 [node name="pickArea" type="Area2D" parent="." index="2"]
@@ -46,9 +48,17 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
+itemName = "sceneScript"
 
 [node name="col" type="CollisionShape2D" parent="pickArea" index="0"]
 
+position = Vector2( -2.11335, 6.14165 )
+scale = Vector2( 26.9932, 0.918206 )
 shape = SubResource( 2 )
+
+[node name="inside" type="Sprite" parent="." index="3"]
+
+visible = false
+texture = ExtResource( 3 )
 
 
