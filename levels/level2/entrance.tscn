@@ -54,6 +54,9 @@ levelPlusScene = "level2/cell"
 
 [node name="supports" type="Node2D" parent="." index="4"]
 
+[node name="events" type="Node2D" parent="." index="5"]
+
+scale = Vector2( 1, 1 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
 
 stream = ExtResource( 4 )
