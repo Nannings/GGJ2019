@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
-[ext_resource path="res://characters/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/items/pic_closet/picCloset.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/items/knife_cupboard/knifeCupboard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/items/bed_police/bedPolice.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
 
-[node name="entrance" type="Node2D"]
+[node name="entrance" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -53,19 +56,39 @@ format = 1
 tile_data = PoolIntArray( 4, 13, 0, 5, 13, 0, 6, 13, 0, 7, 13, 0, 8, 13, 0, 9, 13, 0, 10, 13, 0, 11, 13, 0, 12, 13, 0, 13, 13, 0, 65540, 20, 0, 65541, 20, 0, 65542, 20, 0, 65543, 20, 0, 65544, 20, 0, 65545, 20, 0, 65546, 20, 0, 65547, 20, 0, 65548, 20, 0, 65549, 20, 0, 131076, 20, 0, 131077, 21, 0, 131078, 20, 0, 131079, 21, 0, 131080, 20, 0, 131081, 21, 0, 131082, 20, 0, 131083, 21, 0, 131084, 20, 0, 131085, 21, 0, 196612, 14, 0, 196613, 13, 0, 196614, 13, 0, 196615, 13, 0, 196616, 13, 0, 196617, 13, 0, 196618, 13, 0, 196619, 13, 0, 196620, 13, 0, 196621, 13, 0, 262148, 14, 0, 262149, 13, 0, 262150, 13, 0, 262151, 13, 0, 262152, 13, 0, 262153, 13, 0, 262154, 13, 0, 262155, 13, 0, 262156, 13, 0, 262157, 13, 0, 327684, 13, 0, 327685, 13, 0, 327686, 13, 0, 327687, 14, 0, 327688, 14, 0, 327689, 13, 0, 327690, 13, 0, 327691, 13, 0, 327692, 13, 0, 327693, 13, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Transform", "Visibility", "Z Index" ]
 
-[node name="player" parent="." index="2" instance=ExtResource( 2 )]
+[node name="item" parent="staticLayer2" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 3963.15, 68.4209 )
+
+[node name="item2" parent="staticLayer2" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 1873.68, 73.6841 )
+
+[node name="item3" parent="staticLayer2" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 1468.42, 215.789 )
+
+[node name="item4" parent="staticLayer2" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 4315.78, 163.158 )
+
+[node name="item5" parent="staticLayer2" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 2878.94, 147.368 )
+
+[node name="player" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 3007.34, 1253.66 )
 
 [node name="transports" type="Node2D" parent="." index="3"]
 
-[node name="transpoint" parent="transports" index="0" instance=ExtResource( 3 )]
+[node name="transpoint" parent="transports" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 2557.78, 1759.59 )
 scale = Vector2( 2, 1 )
 levelPlusScene = "level2/entrance"
 
-[node name="transpoint2" parent="transports" index="1" instance=ExtResource( 3 )]
+[node name="transpoint2" parent="transports" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 1443.4, 1275.1 )
 scale = Vector2( 1, 2 )
