@@ -1,4 +1,49 @@
 {
+  "sceneDaughterIntro": {
+    "0":{
+      "speaker": "Karen",
+      "text": "Hey Mom!",
+    },
+    "1":{
+      "speaker": "Karen",
+      "text": "Have you seen the news?",
+    },
+    "2": {
+      "speaker": "Karen",
+      "text": "They say there's a disaster coming",
+    },
+    "3": {
+      "speaker": "Karen",
+      "text": "Guess we'll have to leave town for a while.",
+    }
+  },
+   "sceneChadIntro": {
+          "0":{
+            "speaker": "Chad",
+            "text": "Ay",
+
+          },
+        "1": {
+          "speaker": "Chad",
+          "text": "Fosho",
+        },
+        "2": {
+          "speaker": "Chad",
+          "text": "Lit",
+        },
+        "3": {
+          "speaker": "Chad",
+          "text": "Depp",
+        },
+        "4": {
+          "speaker": "Chad",
+          "text": "Fortnite dance",
+        },
+          "5": {
+            "speaker": "Chad",
+            "text": "*sigh*",
+          }
+        },
   "sceneHouseIntro": {
     "0": {
       "speaker": "Karen",
