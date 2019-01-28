@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var dBox = preload("res://UI/dialogueBox.tscn")
-onready var sprite = $sprite 
+onready var sprite = get_node("sprite")
 onready var animations = sprite.get_node("animations")
 onready var flashLight = get_node("flashLight")
 
@@ -30,12 +30,9 @@ func _ready():
 	tween.start()
 	
 	pass
-
-func _process(delta):
-	speed = maxSpeed - Global.calculateWeight()
-#	print(speed)
-
-	if Input.is_key_pressed(KEY_P):
+	
+func flashlight_manager(delta):
+	if Input.is_action_pressed("toggle_flashlight"):
 		flashLightActive = !flashLightActive
 		if not flashLightActive:
 			flashLightSprite2.visible = true
@@ -54,6 +51,11 @@ func _process(delta):
 	else:
 		battery -= delta / lightDecrease
 	flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
+
+func _process(delta):
+	speed = maxSpeed - Global.calculateWeight()
+#	print(speed)
+	flashlight_manager(delta)
 
 func _physics_process(delta):
 	direction = Vector2(0,0)

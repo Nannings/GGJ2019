@@ -4,8 +4,9 @@
 [ext_resource path="res://objects/items/pic_closet/picCloset.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/items/knife_cupboard/knifeCupboard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/items/bed_police/bedPolice.tscn" type="PackedScene" id=4]
-[ext_resource path="res://characters/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
+
 
 [node name="entrance" type="Node2D"]
 
