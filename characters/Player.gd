@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var dBox = preload("res://UI/dialogueBox.tscn")
+onready var dialogueSystem = get_node("/root/DialogueSystem")
 onready var sprite = get_node("sprite")
 onready var animations = sprite.get_node("animations")
 onready var flashLight = get_node("flashLight")
@@ -80,30 +80,24 @@ func pickup(itemName, item):
 		if Global.values.inv.space.size() != 10:
 			for key in Global.ITEMS:
 				if key == itemName:
-						Global.values.inv.space.append(itemName)
-						print(Global.values.inv.space)
-						if !item.get_owner().has_node("inside"):
-							item.get_owner().queue_free()
-						else:
-							item.get_owner().get_node("pickArea").queue_free()
-							if item.get_owner().get_node("inside").visible == true:
-								item.get_owner().get_node("inside").visible = false
-						var dBoxI = dBox.instance()
-						print(Global.ITEMS[key].pickup)
-						dBoxI.ini([],[Global.ITEMS[key].pickup], self)
-						get_tree().get_root().add_child(dBoxI)
+					Global.values.inv.space.append(itemName)
+					print(Global.values.inv.space)
+					if !item.get_owner().has_node("inside"):
+						item.get_owner().queue_free()
+					else:
+						item.get_owner().get_node("pickArea").queue_free()
+						if item.get_owner().get_node("inside").visible == true:
+							item.get_owner().get_node("inside").visible = false
+					showItem(itemName)
 		else:
 			itemName = "backpackFull"
-			for key in Global.ITEMS:
-				if key == itemName:
-					print(Global.values.inv.space)				
-					var dBoxI = dBox.instance()
-					print(Global.ITEMS[key].pickup)
-					dBoxI.ini([],[Global.ITEMS[key].pickup], self)
-					get_tree().get_root().add_child(dBoxI)
+			showItem(itemName)
+
+func showItem(var itemName):
+	dialogueSystem.showItem(self, itemName)
+	Global.values.player.talking = true
 
 func showDialog(sceneScript):
-	var dialogueSystem = get_node("/root/DialogueSystem")
 	dialogueSystem.show(self, sceneScript)
 	Global.values.player.talking = true
 		

@@ -30,7 +30,8 @@ func _ready():
 	pass
 
 func show(var player, var diaName):
-
+	$speakerPanel.visible = true
+		
 	player.connect("dialogueDone", self, "doneTalking", [], 1)
 	
 	getDialogue(diaName)
@@ -41,7 +42,13 @@ func show(var player, var diaName):
 	
 	showDialogue()
 
-func showItem():
+func showItem(var player, var itemName):
+	$speakerPanel.visible = false
+	
+	for key in Global.ITEMS:
+		if key == itemName:
+			dialogue.append(Global.ITEMS[key].pickup)
+	showDialogue()
 	pass
 
 func getDialogue(var sceneScript):
@@ -71,9 +78,7 @@ func _process(delta):
 	skip()
 	nextPage()
 
-func nextPage():
-#	set("visibility/visible",true)
-	
+func nextPage():	
 	if event != null:
 		if(Input.is_action_just_pressed("accept")) || beginPage == true:
 			beginPage = false
@@ -85,13 +90,10 @@ func nextPage():
 					speakerLabel.set_text(speaker[page])
 					rtl.set_visible_characters(0)
 					rtl.get_total_character_count()
-					#for c in choices[page].values():
-						#print(c)
 						
 				else:
 					talklF.start()
 					visible = false
-					print(123)
 					
 			else:
 #				audio.stop()
