@@ -21,41 +21,13 @@ var switchLight = false
 var flashLightActive = false;
 
 func _ready():
-	flashLightSprite = flashLight.get_node("flashLightSprite")
-	flashLightSprite2 = flashLight.get_node("flashLightSprite2")
-	
-	var startScale = flashLightSprite.scale
-	var tween = get_node("Tween")
-	tween.interpolate_property(flashLightSprite, "scale", startScale, startScale * 1.01, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	tween.start()
-	
+	flashlightInit()
 	pass
-	
-func flashlight_manager(delta):
-	if Input.is_action_pressed("toggle_flashlight"):
-		flashLightActive = !flashLightActive
-		if not flashLightActive:
-			flashLightSprite2.visible = true
-			flashLightSprite.visible = false
-		else:
-			flashLightSprite2.visible = false
-			flashLightSprite.visible = true
-	
-	if not flashLightActive:
-		flashLightSprite2.visible = true
-		flashLightSprite.visible = false
-	elif Input.is_key_pressed(KEY_K) && battery < 1 :
-		flashLightSprite2.visible = false
-		flashLightSprite.visible = true
-		battery += delta / lightDecrease 
-	else:
-		battery -= delta / lightDecrease
-	flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
 
 func _process(delta):
 	speed = maxSpeed - Global.calculateWeight()
 #	print(speed)
-	flashlight_manager(delta)
+	flashlightManager(delta)
 
 func _physics_process(delta):
 	direction = Vector2(0,0)
@@ -129,47 +101,24 @@ func pickup(itemName, item):
 					print(Global.ITEMS[key].pickup)
 					dBoxI.ini([],[Global.ITEMS[key].pickup], self)
 					get_tree().get_root().add_child(dBoxI)
-	  
+
+func showDialog(sceneScript):
+	var dialogueSystem = get_node("/root/DialogueSystem")
+	dialogueSystem.show(self, sceneScript)
+	Global.values.player.talking = true
 		
 func talk(sceneScript):
 	if Input.is_action_pressed("accept") && !Global.values.player.talking:
-		Global.values.player.talking = true
-		for key in Global.TALKS:
-			if key == sceneScript:
-				var speaker = []
-				var dialogue = []
-#				var voices = []
-				for sent in Global.TALKS[key]:
-					speaker.append(Global.TALKS[key][sent].speaker)
-					dialogue.append(Global.TALKS[key][sent].text)
-#					voices.append(Global.TALKS[key][sent].voice)
-				var dBoxI = dBox.instance()
-	
-				dBoxI.ini(speaker, dialogue, self)
-				get_tree().get_root().add_child(dBoxI)
+		showDialog(sceneScript)
 				
 func event(sceneScript,event):
-	Global.values.player.talking = true
-	for key in Global.TALKS:
-		if key == sceneScript:
-			
-			var speaker = []
-			var dialogue = []
-#			var voices = []
-			for sent in Global.TALKS[key]:
-				speaker.append(Global.TALKS[key][sent].speaker)
-				dialogue.append(Global.TALKS[key][sent].text)
-#				voices.append(Global.TALKS[key][sent].voice)
-			var dBoxI = dBox.instance()
-			dBoxI.ini(speaker, dialogue, self)
-			get_tree().get_root().add_child(dBoxI)
-			event.queue_free()
-			
-			
+	showDialog(sceneScript)
 
 #lower speed by 5% for 1 kg
 func doneTalking():
 	print("test")
+	
+################FROM HERE ON IS ONLY FOR FLASHLIGHT NEEDS HIS OWN SCRIPT #################
 
 func hsv_lerp(cola, colb, t):
     #This part will flip the direction of the lerp if the two colors are above
@@ -197,6 +146,36 @@ func hsv_lerp(cola, colb, t):
     newcol.h = h
 
     return newcol
+
+func flashlightInit():
+	flashLightSprite = flashLight.get_node("flashLightSprite")
+	flashLightSprite2 = flashLight.get_node("flashLightSprite2")
+	
+	var startScale = flashLightSprite.scale
+	var tween = get_node("Tween")
+	tween.interpolate_property(flashLightSprite, "scale", startScale, startScale * 1.01, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.start()
+	
+func flashlightManager(delta):
+	if Input.is_action_pressed("toggle_flashlight"):
+		flashLightActive = !flashLightActive
+		if not flashLightActive:
+			flashLightSprite2.visible = true
+			flashLightSprite.visible = false
+		else:
+			flashLightSprite2.visible = false
+			flashLightSprite.visible = true
+	
+	if not flashLightActive:
+		flashLightSprite2.visible = true
+		flashLightSprite.visible = false
+	elif Input.is_key_pressed(KEY_K) && battery < 1 :
+		flashLightSprite2.visible = false
+		flashLightSprite.visible = true
+		battery += delta / lightDecrease 
+	else:
+		battery -= delta / lightDecrease
+	flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
 
 func _on_Tween_tween_completed(object, key):
 	var startScale = flashLightSprite.scale

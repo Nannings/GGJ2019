@@ -79,8 +79,8 @@ func loadJSON():
 
 func _deferred_gotoScene(path):
 	print(path)
-	if not scene:
-		scene.free()
+#	if not scene:
+	scene.free()
 	
 	var res = ResourceLoader.load(path)
 	scene = res.instance()

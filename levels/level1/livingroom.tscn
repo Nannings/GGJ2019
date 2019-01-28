@@ -127,7 +127,6 @@ margin_bottom = 830.0
 
 [node name="events" type="Node2D" parent="." index="7"]
 
-editor/display_folded = true
 z_index = -1
 _sections_unfolded = [ "Z Index" ]
 
