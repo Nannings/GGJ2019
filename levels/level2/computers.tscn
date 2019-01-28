@@ -12,9 +12,6 @@
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://objects/items/book/book.tscn" type="PackedScene" id=11]
 
-
-
-
 [node name="entrance" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
@@ -73,32 +70,26 @@ position = Vector2( 2947.87, 3039.73 )
 [node name="item3" parent="playertile" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 3423.87, 3031.38 )
-scale = Vector2( 1, 1 )
 
 [node name="item4" parent="playertile" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 3413.76, 3996.44 )
-scale = Vector2( 1, 1 )
 
 [node name="item5" parent="playertile" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 3375.01, 2076.57 )
-scale = Vector2( 1, 1 )
 
 [node name="item6" parent="playertile" index="5" instance=ExtResource( 4 )]
 
 position = Vector2( 1108.22, 2081.56 )
-scale = Vector2( 1, 1 )
 
 [node name="item7" parent="playertile" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 1043.9, 3024.28 )
-scale = Vector2( 1, 1 )
 
 [node name="item8" parent="playertile" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 1053.34, 3986.84 )
-scale = Vector2( 1, 1 )
 
 [node name="item9" parent="playertile" index="8" instance=ExtResource( 5 )]
 
