@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-onready var dialogueSystem = get_node("/root/DialogueSystem")
+onready var dialogueSystem = get_node("/root/Canvas/DialogueSystem")
 onready var sprite = get_node("sprite")
 onready var animations = sprite.get_node("animations")
 onready var flashLight = get_node("flashLight")
@@ -169,7 +169,7 @@ func flashlightManager(delta):
 		battery += delta / lightDecrease 
 	else:
 		battery -= delta / lightDecrease
-	flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
+		flashLightSprite.color = hsv_lerp(Color(0, 0, 0, 1), Color(1, 1, 1, 1), battery)
 
 func _on_Tween_tween_completed(object, key):
 	var startScale = flashLightSprite.scale

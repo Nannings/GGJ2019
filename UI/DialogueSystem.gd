@@ -32,7 +32,7 @@ func _ready():
 func show(var player, var diaName):
 	$speakerPanel.visible = true
 		
-	player.connect("dialogueDone", self, "doneTalking", [], 1)
+	player.connect("dialogueDone", self, "doneTalking")
 	
 	getDialogue(diaName)
 	
@@ -145,6 +145,7 @@ func play_voice(name):
 func _on_talklessFrames_timeout():
 	emit_signal("dialogueDone")
 	Global.values.player.talking = false
+	talklF.stop()
 	reset()
 
 func _on_dialogueBox_dialogueDone():

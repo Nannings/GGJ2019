@@ -17,12 +17,12 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Global.gd"
-DialogueSystem="*res://UI/DialogueSystem.tscn"
+Canvas="*res://UI/Canvas.tscn"
 
 [display]
 
-window/size/width=1080
-window/size/height=920
+window/size/width=1280
+window/size/height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

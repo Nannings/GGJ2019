@@ -1,6 +1,6 @@
 extends Control
 
-onready var dialogueSystem = get_node("/root/DialogueSystem")
+onready var dialogueSystem = get_node("/root/Canvas/DialogueSystem")
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
