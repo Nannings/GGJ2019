@@ -5,15 +5,17 @@ signal dialogueDone()
 
 #onready var choice = preload("res://scenes/objects/choicesbox.tscn")
 onready var speakerLabel = $speakerPanel.get_node("speaker")
-onready var timer = get_node("timeBetweenLetters")
+onready var timeBetweenLetters = get_node("timeBetweenLetters")
 onready var talklF = get_node("talklessFrames")
 onready var rtl = $panel.get_node("rtl")
 onready var audio = get_node("AudioStreamPlayer2D")
+onready var portret = $panel.get_node("portret")
 
 var speaker = []
 var dialogue = []
 var player
 var voices = []
+var portrets = []
 var page = 0
 var choiceTime = false
 var event
@@ -57,16 +59,13 @@ func getDialogue(var sceneScript):
 			for sent in Global.TALKS[key]:
 				speaker.append(Global.TALKS[key][sent].speaker)
 				dialogue.append(Global.TALKS[key][sent].text)
+				portrets.append(Global.TALKS[key][sent].portret)
 #				voices.append(Global.TALKS[key][sent].voice)
 	print(speaker)
 	print(dialogue)
 
-func showDialogue():
-	
-	rtl.set_bbcode(dialogue[page])
-	if speaker != []:
-		speakerLabel.set_text(speaker[page])
-	rtl.set_visible_characters(0)
+func showDialogue():	
+	fillBox()	
 	beginPage = true
 	self.visible = true	
 
@@ -75,8 +74,15 @@ func _input(e):
 	
 func _process(delta):		
 	hide()
-	skip()
 	nextPage()
+
+func fillBox():
+	rtl.set_bbcode(dialogue[page])
+	rtl.set_visible_characters(0)
+	if speaker != []:
+		speakerLabel.set_text(speaker[page])
+	if portrets != []:
+		portret.texture = load("res://UI/portret/" + portrets[page] + ".png")
 
 func nextPage():	
 	if event != null:
@@ -85,34 +91,18 @@ func nextPage():
 			event = null
 			if rtl.get_visible_characters() >= rtl.get_total_character_count():
 				if page < dialogue.size()-1:
-					page += 1
-					rtl.set_bbcode(dialogue[page])
-					speakerLabel.set_text(speaker[page])
-					rtl.set_visible_characters(0)
-					rtl.get_total_character_count()
-						
+					page += 1					
+					fillBox()
 				else:
 					talklF.start()
-					visible = false
-					
+					visible = false				
 			else:
-#				audio.stop()
-#				if voices[page] != "none":
-#					play_voice(voices[page])
+#				rtl.set_visible_characters(rtl.get_total_character_count())
+				pass
 
-				rtl.set_visible_characters(rtl.get_total_character_count())
 			
 			if rtl.get_visible_characters() <= 0:
 				beginPage = true
-					
-
-
-func continueFile():
-	page = page + 2
-	choiceTime = false
-	rtl.set_bbcode(dialogue[page])
-	speakerLabel.set_text(speaker[page])
-	rtl.set_visible_characters(0)
 	
 func hide():
 	if event != null:
@@ -120,17 +110,11 @@ func hide():
 			event = null
 			set("visibility/visible",!get("visibility/visible"))
 
-func skip():
-	if Input.is_action_pressed("skip"):
-		set("visibility/visible",true)
-		rtl.set_visible_characters(get_total_character_count())
-		page += 1
-		rtl.set_bbcode(dialogue[page])
-		speakerLabel.set_text(speaker[page])
-
 func reset():
 	speaker = []
 	dialogue = []
+	portrets = []
+	voices = []
 	page = 0
 	choiceTime = false
 
@@ -150,3 +134,7 @@ func _on_talklessFrames_timeout():
 
 func _on_dialogueBox_dialogueDone():
 	print("dia done test")
+
+func _on_timeBetweenLetters_timeout():
+	rtl.set_visible_characters(rtl.get_visible_characters() + 1)
+	pass # replace with function body
