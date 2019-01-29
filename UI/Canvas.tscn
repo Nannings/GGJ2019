@@ -5,7 +5,7 @@
 [ext_resource path="res://UI/portret/none.png" type="Texture" id=3]
 [ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 
 size = 30
 use_mipmaps = false
@@ -13,7 +13,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 
 size = 40
 use_mipmaps = false
@@ -78,7 +78,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "name"
 align = 1
 percent_visible = 1.0
@@ -140,7 +140,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "dsdasdsadasdsa"
 visible_characters = -1

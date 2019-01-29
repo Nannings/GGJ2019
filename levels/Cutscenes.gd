@@ -8,7 +8,7 @@ onready var label = $label
 export (String) var sceneScript
 
 func _ready():
-	dialogueSystem.show(self, sceneScript)
+	dialogueSystem.show(sceneScript)
 	Global.values.player.talking = true
 	
 

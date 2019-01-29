@@ -7,8 +7,6 @@ onready var flashLight = get_node("flashLight")
 
 export (float) var battery = 1
 
-signal dialogueDone
-
 var direction = Vector2()
 var movement = Vector2()
 var speed = 9000
@@ -94,11 +92,11 @@ func pickup(itemName, item):
 			showItem(itemName)
 
 func showItem(var itemName):
-	dialogueSystem.showItem(self, itemName)
+	dialogueSystem.showItem(itemName)
 	Global.values.player.talking = true
 
 func showDialog(sceneScript):
-	dialogueSystem.show(self, sceneScript)
+	dialogueSystem.show(sceneScript)
 	Global.values.player.talking = true
 		
 func talk(sceneScript):
@@ -109,8 +107,6 @@ func event(sceneScript,event):
 	showDialog(sceneScript)
 
 #lower speed by 5% for 1 kg
-func doneTalking():
-	print("test")
 	
 ################FROM HERE ON IS ONLY FOR FLASHLIGHT NEEDS HIS OWN SCRIPT #################
 
