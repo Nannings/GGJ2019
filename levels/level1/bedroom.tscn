@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://objects/items/bed/bed.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/items/necklace/necklace.tscn" type="PackedScene" id=7]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=8]
 
 [node name="kitchen" type="Node2D"]
 
@@ -84,10 +83,5 @@ levelPlusScene = "level1/hall"
 [node name="item" parent="items" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 516.411, 2298.22 )
-
-[node name="Clock" parent="." index="5" instance=ExtResource( 8 )]
-
-margin_right = 2655.0
-margin_bottom = 361.0
 
 

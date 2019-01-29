@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://objects/items/pet/pet.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/items/apple_in_fridge/apple.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/items/sandwich/sandwich.tscn" type="PackedScene" id=6]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=7]
 
 [node name="kitchen" type="Node2D"]
 
@@ -59,10 +58,5 @@ position = Vector2( 409.195, 1762.04 )
 [node name="item2" parent="items" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 4783.68, 2344.56 )
-
-[node name="Clock" parent="." index="4" instance=ExtResource( 7 )]
-
-margin_right = 2614.0
-margin_bottom = 375.0
 
 
