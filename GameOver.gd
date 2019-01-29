@@ -33,9 +33,9 @@ func _ready():
 		 endSeq += "Luckily, you brought enough items. You are sure you can take on any challenge thrown at you. "
 		
 	if time >= 0 && time <= 1000:
-		endSeq += "You was not in time to make it out of the save zone. "
+		endSeq += "You were not in time to make it out of the save zone. "
 	if time > 1000 && time <=2000:
-		endSeq += "You was in time to make it to the save zone "
+		endSeq += "You were in time to make it to the save zone "
 		
 	endSeq += "the end"
 	
@@ -43,4 +43,4 @@ func _ready():
 
 func _on_Button_pressed():
 	print("restart")
-	get_tree().change_scene("res://UI/titlescreen2/titlescreen.tscn")
+	Global.gotoScene("res://UI/titlescreen2/titlescreen.gd")

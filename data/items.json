@@ -50,7 +50,7 @@
         "slowdown": 2
     },
     "pet": {
-        "pickup": "It's your pet! It's your best friend in the whole world and a very good boy!",
+        "pickup": "You find your beloved pet Simba! Your mind fills with thoughts of home.",
         "description": "It's your pet!",
         "slowdown": 5
     },

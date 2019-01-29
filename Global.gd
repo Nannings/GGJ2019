@@ -15,7 +15,7 @@ var scene
 
 var level = 1
 var screen = 1
-var time = 2000 #2000
+var time = 1000 #2000
 
 var values = {
 	player = {

@@ -104,8 +104,10 @@ func action():
 func pickup(itemName, item):
 	if Input.is_action_pressed("accept") && !Global.values.player.talking:
 		if Global.values.inv.space.size() != 10:
+			print("test1")
 			for key in Global.ITEMS:
 				if key == itemName:
+						print("test2")
 						Global.values.inv.space.append(itemName)
 						print(Global.values.inv.space)
 						if !item.get_owner().has_node("inside"):

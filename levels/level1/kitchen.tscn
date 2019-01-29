@@ -52,6 +52,9 @@ levelPlusScene = "level1/livingroom"
 
 [node name="items" type="Node2D" parent="." index="3"]
 
+z_index = -1
+_sections_unfolded = [ "Z Index" ]
+
 [node name="item" parent="items" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 409.195, 1762.04 )

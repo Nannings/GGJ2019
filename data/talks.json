@@ -80,11 +80,11 @@
   "tutorial":{
     "0": {
       "speaker": "Broadcaster",
-      "text": "...And that why the world is ending. Prepare to leave your home in these dark days."
+      "text": "...And that's why the world is ending. Prepare to leave your home in these dark days."
     },
     "1": {
       "speaker": "Broadcaster",
-      "text": "Survey's show, most people can only hold items."
+      "text": "Survey's show, most people can only hold 10 items."
     },
     "2": {
       "speaker": "Broadcaster",
@@ -95,10 +95,6 @@
       "text": "Even if it weights much and slows you down, it may hold important memories to you."
     },
     "4": {
-      "speaker": "Broadcaster",
-      "text": "Even if it weights much and slows you down, it may hold important memories to you."
-    },
-    "5": {
       "speaker": "Broadcaster",
       "text": "Umm, I guess this is the last broadcast. Sorry, just wanted to say what I could"
     }

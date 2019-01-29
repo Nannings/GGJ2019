@@ -13,4 +13,6 @@ func _ready():
 
 
 func _on_Button_pressed():
-	Global.gotoScene("res://levels/level1/livingroom.tscn")
+	print("go to scene")
+	get_tree().change_scene("res://levels/level1/livingroom.tscn")
+	pass # replace with function body

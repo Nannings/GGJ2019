@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://objects/items/locker/locker.tscn" type="PackedScene" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://characters/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/items/apple_in_fridge/apple.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=8]
 
-[node name="entrance" type="Node2D"]
+[node name="entrance" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -56,7 +57,7 @@ position = Vector2( 4625.8, 1069.81 )
 
 [node name="item6" parent="TileMap" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 4607.09, 62.9384 )
+position = Vector2( 4607.09, 62.9385 )
 
 [node name="player" parent="." index="1" instance=ExtResource( 5 )]
 
@@ -80,5 +81,7 @@ position = Vector2( 4070.34, 174.297 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="supports" type="Node2D" parent="." index="4"]
+
+[node name="Clock" parent="." index="5" instance=ExtResource( 8 )]
 
 

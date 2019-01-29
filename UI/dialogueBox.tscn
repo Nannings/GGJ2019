@@ -1,17 +1,23 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://UI/dialogueBox.gd" type="Script" id=1]
 [ext_resource path="res://UI/Steelworks Vintage Demo.otf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFontData" id=1]
+
+hinting = 2
+font_path = ""
+
+[sub_resource type="DynamicFont" id=2]
 
 size = 20
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
+fallback/0 = SubResource( 1 )
+_sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
-[node name="dialogueBox" type="Control" index="0"]
+[node name="dialogueBox" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 1.0
@@ -26,7 +32,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Margin", "Rect" ]
+_sections_unfolded = [ "Focus", "Margin", "Mouse", "Rect" ]
 
 [node name="speakerPanel" type="Panel" parent="." index="0"]
 
@@ -105,7 +111,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = ""
 visible_characters = -1

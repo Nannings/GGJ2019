@@ -5,8 +5,6 @@
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=4]
 
-
-
 [node name="kitchen" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
@@ -44,7 +42,13 @@ position = Vector2( 3680.45, 4644.3 )
 scale = Vector2( 3, 1 )
 levelPlusScene = "level1/livingroom"
 
-[node name="Clock" parent="." index="3" instance=ExtResource( 4 )]
+[node name="transpoint2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 949.707, 1754.89 )
+scale = Vector2( 3, 1 )
+levelPlusScene = "level2/entrance"
+
+[node name="Clock" parent="." index="4" instance=ExtResource( 4 )]
 
 margin_right = 1231.0
 margin_bottom = 875.0
