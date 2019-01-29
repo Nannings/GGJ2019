@@ -1,101 +1,180 @@
 {
+  "sceneDaughterIntro": {
+    "0": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "Hey Mom!"
+    },
+    "1": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "Have you seen the news?"
+    },
+    "2": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "They say there's a disaster coming"
+    },
+    "3": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "Guess we'll have to leave town for a while."
+    }
+  },
+   "sceneChadIntro": {
+    "0": {
+      "speaker": "Chad",
+      "portret": "boyfriend1",
+      "text": "Ay"
+
+    },
+    "1": {
+      "speaker": "Chad",
+      "portret": "boyfriend2",
+      "text": "Fosho"
+    },
+    "2": {
+      "speaker": "Chad",
+      "portret": "boyfriend1",
+      "text": "Lit"
+    },
+    "3": {
+      "speaker": "Chad",
+      "portret": "boyfriend3",
+      "text": "Depp"
+    },
+    "4": {
+      "speaker": "Chad",
+      "portret": "boyfriend1",
+      "text": "Fortnite dance"
+    },
+    "5": {
+      "speaker": "Chad",
+      "portret": "boyfriend2",
+      "text": "*sigh*"
+    }
+        },
   "sceneHouseIntro": {
     "0": {
       "speaker": "Karen",
+      "portret": "daughter1",
       "text": "Mom, Come quick!"
     },
     "1": {
       "speaker": "Karen",
+      "portret": "daughter1",
       "text": "It is all over the news. The world is coming to an end!"
     },
     "2": {
       "speaker": "Karen",
+      "portret": "daughter1",
       "text": "You should Pess Z at the television to find out more!"
     }
   },
   "sceneHouseEnd": {
     "0": {
       "speaker": "Karen",
+      "portret": "daughter1",
       "text": "Are you just gonna leave us here?"
     }
   },
   "cutscene1": {
     "0": {
       "speaker": "NightTime",
+      "portret": "none",
       "text": "You travelled through all through the night and consequently lost some health. You feel tired and already start missing home."
     }
   },
   "cutScene1Person": {
     "0": {
       "speaker": "NightTime",
+      "portret": "none",
       "text": "You travelled all through the night and consequently lost some health. You feel tired and already start missing home."
     },
     "1": {
       "speaker": "NightTime",
+      "portret": "none",
       "text": "Your companion was hungry and went on a midnight eating binge. As a result your food supply was decreased."
     }
   },
   "cutscene2": {
     "0": {
       "speaker": "NightTime",
+      "portret": "none",
       "text": "Your car suddenly exploded. You were able to get away, but not without injuring yourself. You lost some health and you long to go home."
     }
   },
   "cutsceneHank": {
     "0": {
       "speaker": "NightTime",
+      "portret": "none",
       "text": "While you were sleeping Hank stole an item and fled the scene!"
     }
   },
   "squatterHouse": {
     "0": {
       "speaker": "Hank",
+      "portret": "none",
       "text": "Your weird neighbor Hank wants to join you on your journey? Do you want to take him with you?"
     }
   },
   "newsarticle1": {
     "0": {
       "speaker": "Newsarticle",
+      "portret": "none",
       "text": "Missing person report! Police are searching for a missing woman. She left her house and did not come back. Concerns are held as this behaviour is out of character."
     }
   },
   "newsarticle2": {
     "0": {
       "speaker": "Newsarticle",
+      "portret": "none",
       "text": "Missing person report! Frantic search for a missing teenager! Family asks for anyone with information about the whereabouts of a young girl  to contact authorities."
     }
   },
   "basementWeapon": {
     "0": {
       "speaker": "Basement",
+      "portret": "none",
       "text": "You went downstairs to the basement, when suddenly Hank attacks you! Luckily you have brought a weapon and are able to counter attack. Hank got scared and runs away!"
     }
   },
   "basementNoWeapon": {
     "0": {
       "speaker": "Basement",
+      "portret": "none",
       "text": "You went to look for items in the basement, but everything went black before your eyes. Hank attacked you and you lose half your health."
     }
   },
   "tutorial":{
     "0": {
       "speaker": "Broadcaster",
-      "text": "...And that's why the world is ending. Prepare to leave your home in these dark days."
+      "portret": "none",
+      "text": "...And that why the world is ending. Prepare to leave your home in these dark days."
     },
     "1": {
       "speaker": "Broadcaster",
-      "text": "Survey's show, most people can only hold 10 items."
+      "portret": "none",
+      "text": "Survey's show, most people can only hold items."
     },
     "2": {
       "speaker": "Broadcaster",
+      "portret": "none",
       "text": "So be sure to pickup what's important or usefull you with the Z key!"
     },
     "3": {
       "speaker": "Broadcaster",
+      "portret": "none",
       "text": "Even if it weights much and slows you down, it may hold important memories to you."
     },
     "4": {
       "speaker": "Broadcaster",
+      "portret": "none",
+      "text": "Even if it weights much and slows you down, it may hold important memories to you."
+    },
+    "5": {
+      "speaker": "Broadcaster",
+      "portret": "none",
       "text": "Umm, I guess this is the last broadcast. Sorry, just wanted to say what I could"
     }
   }

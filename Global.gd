@@ -64,14 +64,14 @@ func gotoScene(path):
 func loadJSON(): 
 	var file = File.new()
 	
-	var path = "res://data/items.JSON"
+	var path = "res://data/items.json"
 	assert file.file_exists(path)
 	file.open(path, file.READ)
 	
 	ITEMS = parse_json(file.get_as_text()) #alle files in een keer laden, maar nog wel aan de juste constante koppelen
 
 	
-	path = "res://data/talks.JSON"
+	path = "res://data/talks.json"
 	assert file.file_exists(path)
 	file.open(path, file.READ)
 	
@@ -79,6 +79,7 @@ func loadJSON():
 
 func _deferred_gotoScene(path):
 	print(path)
+#	if not scene:
 	scene.free()
 	
 	var res = ResourceLoader.load(path)

@@ -17,12 +17,12 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Global.gd"
-BGmusic="*res://sounds/BGmusic.gd"
+Canvas="*res://UI/Canvas.tscn"
 
 [display]
 
-window/size/width=1080
-window/size/height=920
+window/size/width=1280
+window/size/height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
@@ -68,6 +68,8 @@ left=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 right=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
  ]
 accept=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+toggle_flashlight=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
  ]
 
 [rendering]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://objects/items/bagpack/bagpack.tscn" type="PackedScene" id=2]
-[ext_resource path="res://characters/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/daughter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://characters/boyfriend.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/teli.tscn" type="PackedScene" id=6]
@@ -10,8 +10,7 @@
 [ext_resource path="res://objects/items/souvenir/souvenir.tscn" type="PackedScene" id=8]
 [ext_resource path="res://objects/items/gun_closet/gunCloset.tscn" type="PackedScene" id=9]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=10]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=11]
-[ext_resource path="res://levels/conditionEvents/sceneHouseIntro.tscn" type="PackedScene" id=12]
+[ext_resource path="res://levels/conditionEvents/sceneHouseIntro.tscn" type="PackedScene" id=11]
 
 [node name="livingroom" type="Node2D"]
 
@@ -120,17 +119,12 @@ position = Vector2( 158.667, 1912.36 )
 scale = Vector2( 1, 4 )
 levelPlusScene = "level1/hall"
 
-[node name="Clock" parent="." index="6" instance=ExtResource( 11 )]
-
-margin_right = 1251.0
-margin_bottom = 830.0
-
-[node name="events" type="Node2D" parent="." index="7"]
+[node name="events" type="Node2D" parent="." index="6"]
 
 z_index = -1
 _sections_unfolded = [ "Z Index" ]
 
-[node name="eventpoint" parent="events" index="0" instance=ExtResource( 12 )]
+[node name="eventpoint" parent="events" index="0" instance=ExtResource( 11 )]
 
 position = Vector2( 2350, 2700 )
 
