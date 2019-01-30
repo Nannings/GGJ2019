@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://objects/sets/staticEnc.res" type="TileSet" id=1]
 [ext_resource path="res://objects/items/sandwich_fridge/sandwich_fridge.tscn" type="PackedScene" id=2]
@@ -11,9 +11,10 @@
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://levels/transPoint.tscn" type="PackedScene" id=10]
 [ext_resource path="res://objects/items/book/book.tscn" type="PackedScene" id=11]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=12]
+[ext_resource path="res://characters/daughter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=13]
 
-[node name="entrance" type="Node2D"]
+[node name="entrance" type="Node2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
@@ -132,6 +133,8 @@ position = Vector2( 2692.65, 2424.31 )
 
 [node name="transports" type="Node2D" parent="." index="3"]
 
+editor/display_folded = true
+
 [node name="transpoint" parent="transports" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 5294.48, 3198.4 )
@@ -152,6 +155,11 @@ position = Vector2( 3521.37, 830.471 )
 
 [node name="supports" type="Node2D" parent="." index="5"]
 
-[node name="Clock" parent="." index="6" instance=ExtResource( 12 )]
+[node name="daugther" parent="supports" index="0" instance=ExtResource( 12 )]
+
+position = Vector2( 1896.86, 1890.72 )
+sceneScriptName = "shakeTest"
+
+[node name="Clock" parent="." index="6" instance=ExtResource( 13 )]
 
 

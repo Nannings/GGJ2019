@@ -19,6 +19,9 @@ var choiceTime = false
 var event
 var beginPage 
 var canSkip = false
+var shakeAmount = 10
+var player
+var shake_amount = 0
 
 func _ready():
 	self.visible = false
@@ -57,19 +60,19 @@ func _input(e):
 	event = e
 
 func  _process(delta):	
-	if event != null:
-		var isSentenceDone = rtl.get_visible_characters() >= rtl.get_total_character_count()
-		if isSentenceDone:
-			timeBetweenLetters.stop()	
-			
+	if event != null:			
 		if(Input.is_action_just_pressed("accept")) || beginPage == true:
+			var isSentenceDone = rtl.get_visible_characters() >= rtl.get_total_character_count()
+			if isSentenceDone:
+				timeBetweenLetters.stop()	
 			beginPage = false
 			event = null
 			if isSentenceDone:
+				canSkip = false
 				if page < dialogue.size()-1:
 					page += 1				
 					showDialogue()
-					canSkip = false
+#					shake_amount = 10
 				else:
 					talklF.start()
 					visible = false
@@ -81,6 +84,13 @@ func  _process(delta):
 						print(1)
 				if Input.is_action_just_released("accept"):
 					canSkip = true
+		
+#	if shake_amount > 0:
+#		player.camera.set_offset(Vector2( \
+#	        rand_range(-3, 3) * shake_amount, \
+#	        rand_range(-3, 3) * shake_amount \
+#	    ))
+#		shake_amount -= delta
 
 func showDialogue():
 	rtl.set_bbcode(dialogue[page])

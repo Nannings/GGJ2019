@@ -9,7 +9,7 @@
 [ext_resource path="res://objects/items/apple_in_fridge/apple.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=8]
 
-[node name="entrance" type="Node2D" index="0"]
+[node name="entrance" type="Node2D"]
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]

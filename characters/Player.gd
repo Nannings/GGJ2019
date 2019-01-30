@@ -4,6 +4,7 @@ onready var dialogueSystem = get_node("/root/Canvas/DialogueSystem")
 onready var sprite = get_node("sprite")
 onready var animations = sprite.get_node("animations")
 onready var flashLight = get_node("flashLight")
+onready var camera = get_node("Camera2D")
 
 export (float) var battery = 1
 
@@ -19,6 +20,7 @@ var switchLight = false
 var flashLightActive = false;
 
 func _ready():
+	dialogueSystem.player = self
 	flashlightInit()
 	pass
 

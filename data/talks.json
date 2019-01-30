@@ -1,4 +1,26 @@
 {
+  "shakeTest": {
+    "0": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "wait for it..................................................................."
+    },
+    "1": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "shake!!!!"
+    },
+    "2": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "shake"
+    },
+    "3": {
+      "speaker": "Karen",
+      "portret": "daughter1",
+      "text": "shakey shaky"
+    }
+  },
   "sceneDaughterIntro": {
     "0": {
       "speaker": "Karen",
@@ -21,7 +43,7 @@
       "text": "Guess we'll have to leave town for a while."
     }
   },
-   "sceneChadIntro": {
+  "sceneChadIntro": {
     "0": {
       "speaker": "Chad",
       "portret": "boyfriend1",
@@ -53,7 +75,7 @@
       "portret": "boyfriend2",
       "text": "*sigh*"
     }
-        },
+  },
   "sceneHouseIntro": {
     "0": {
       "speaker": "Karen",
@@ -146,7 +168,7 @@
       "text": "You went to look for items in the basement, but everything went black before your eyes. Hank attacked you and you lose half your health."
     }
   },
-  "tutorial":{
+  "tutorial": {
     "0": {
       "speaker": "Broadcaster",
       "portret": "none",
