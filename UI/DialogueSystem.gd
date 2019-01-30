@@ -12,20 +12,21 @@ onready var portret = $panel.get_node("portret")
 
 var speaker = []
 var dialogue = []
-var player
 var voices = []
 var portrets = []
 var page = 0
 var choiceTime = false
 var event
 var beginPage 
+var canSkip = false
 
 func _ready():
 	self.visible = false
 	pass
 
 func show(var diaName):
-	$speakerPanel.visible = true		
+	$speakerPanel.visible = true	
+	portret.visible = true		
 	getDialogue(diaName)
 	if dialogue.size() <= 0:
 		print("dialgue NOT found")
@@ -57,22 +58,29 @@ func _input(e):
 
 func  _process(delta):	
 	if event != null:
+		var isSentenceDone = rtl.get_visible_characters() >= rtl.get_total_character_count()
+		if isSentenceDone:
+			timeBetweenLetters.stop()	
+			
 		if(Input.is_action_just_pressed("accept")) || beginPage == true:
 			beginPage = false
 			event = null
-			if rtl.get_visible_characters() >= rtl.get_total_character_count():
+			if isSentenceDone:
 				if page < dialogue.size()-1:
-					page += 1					
+					page += 1				
 					showDialogue()
+					canSkip = false
 				else:
 					talklF.start()
-					visible = false				
-			else:
-#				rtl.set_visible_characters(rtl.get_total_character_count())
-				pass
-			
-			if rtl.get_visible_characters() <= 0:
-				beginPage = true
+					visible = false
+						
+			if not isSentenceDone:
+				if Input.is_action_just_pressed("accept"):
+					if canSkip:
+						rtl.set_visible_characters(rtl.get_total_character_count())
+						print(1)
+				if Input.is_action_just_released("accept"):
+					canSkip = true
 
 func showDialogue():
 	rtl.set_bbcode(dialogue[page])
@@ -83,6 +91,7 @@ func showDialogue():
 		portret.texture = load("res://UI/portret/" + portrets[page] + ".png")
 	beginPage = true
 	self.visible = true	
+	timeBetweenLetters.start()
 
 func reset():
 	speaker = []

@@ -16,12 +16,10 @@
 
 scale = Vector2( 0.2, 0.2 )
 _sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
+visible = false
 z_index = -1
 mode = 0
 tile_set = ExtResource( 1 )
@@ -44,6 +42,7 @@ _sections_unfolded = [ "Cell", "Z Index" ]
 
 [node name="playertile" type="TileMap" parent="." index="1"]
 
+editor/display_folded = true
 z_index = -1
 mode = 0
 tile_set = ExtResource( 1 )
@@ -73,6 +72,8 @@ position = Vector2( 944.068, 3308.21 )
 position = Vector2( 2350, 2650 )
 
 [node name="supports" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="girlfriend" parent="supports" index="0" instance=ExtResource( 4 )]
 
@@ -121,6 +122,7 @@ levelPlusScene = "level1/hall"
 
 [node name="events" type="Node2D" parent="." index="6"]
 
+editor/display_folded = true
 z_index = -1
 _sections_unfolded = [ "Z Index" ]
 
