@@ -3,6 +3,8 @@ extends Control
 onready var label = get_node("RichTextLabel")
 onready var timer = get_node("Timer")
 
+var clockActive = false;
+
 enum TimeFormat {
     FORMAT_HOURS   = 1 << 0,
     FORMAT_MINUTES = 1 << 1,
@@ -11,9 +13,10 @@ enum TimeFormat {
 }
 
 func _process(delta):	
-
-	var time2 = format_time(Global.time, FORMAT_MINUTES | FORMAT_SECONDS)
-	label.set_text(str(time2))
+	if clockActive:
+		var time2 = format_time(Global.time, FORMAT_MINUTES | FORMAT_SECONDS)
+		label.set_text(str(time2))
+	visible = clockActive
 
 func _on_Timer_timeout():
 	Global.time -= 1

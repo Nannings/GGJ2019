@@ -19,7 +19,6 @@ var event
 var beginPage 
 var canSkip = false
 var shakeAmount = 10
-var player
 var shake_amount = 0
 
 func _ready():
@@ -29,6 +28,7 @@ func _ready():
 func show(diaName):
 	$speakerPanel.visible = true
 	portret.visible = true
+	yesNo.visible = true;
 
 	getDialogue(diaName)
 	if dialogue.size() <= 0:
@@ -39,10 +39,12 @@ func show(diaName):
 func showItem(itemName):
 	$speakerPanel.visible = false
 	portret.visible = false	
+	yesNo.visible = false
 	for key in Global.ITEMS:
 		if key == itemName:
 			dialogue.append(Global.ITEMS[key].pickup)
 	showDialogue()
+	canSkip = true
 	pass
 
 func getDialogue(sceneScript):
@@ -92,7 +94,6 @@ func  _process(delta):
 				if Input.is_action_just_pressed("accept"):
 					if canSkip:
 						rtl.set_visible_characters(rtl.get_total_character_count())
-						print(1)
 				if Input.is_action_just_released("accept"):
 					canSkip = true
 		

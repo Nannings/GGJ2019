@@ -20,7 +20,7 @@ var switchLight = false
 var flashLightActive = false;
 
 func _ready():
-	dialogueSystem.player = self
+	Global.player = self
 	flashlightInit()
 	pass
 

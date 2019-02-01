@@ -39,7 +39,7 @@
         "description": "It reminds you of a better time.",
         "slowdown": 15
     },
-    "jewelryImportant": {
+    "necklace": {
         "pickup": "It's a necklace, it belonged to someone you love. It means a lot to you.",
         "description": "It reminds you of the time you had with the person most important to you.",
         "slowdown": 2

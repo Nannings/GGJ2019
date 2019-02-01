@@ -28,6 +28,8 @@ var values = {
 	}
 }
 
+var player
+
 func _ready():
 	root = get_tree().get_root()
 	scene = root.get_child( root.get_child_count() -1 )
