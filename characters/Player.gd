@@ -10,7 +10,7 @@ export (float) var battery = 1
 
 var direction = Vector2()
 var movement = Vector2()
-var speed = 9000
+var minSpeed = 8000
 var maxSpeed = 9000 #make this heigher if it gets to slow
 var facing = Vector2(0,-1)
 var flashLightSprite 
@@ -25,8 +25,6 @@ func _ready():
 	pass
 
 func _process(delta):
-	speed = maxSpeed - Global.calculateWeight()
-#	print(speed)
 	flashlightManager(delta)
 
 func _physics_process(delta):
@@ -41,7 +39,7 @@ func _physics_process(delta):
 #				pass
 #				print(collider.name)
 
-	movement = speed * direction * delta
+	movement = Global.values.player.speed * direction * delta
 	move_and_slide(movement, Vector2(0,0))
 	
 func walk():
@@ -83,6 +81,10 @@ func pickup(itemName, item):
 				if key == itemName:
 					Global.values.inv.space.append(itemName)
 					print(Global.values.inv.space)
+					Global.values.player.speed = maxSpeed - Global.calculateWeight()
+					if Global.values.player.speed < minSpeed:
+						Global.values.player.speed = minSpeed
+						
 					if !item.get_owner().has_node("inside"):
 						item.get_owner().queue_free()
 					else:
@@ -108,6 +110,7 @@ func talk(sceneScript):
 				
 func event(sceneScript,event):
 	showDialog(sceneScript)
+	event.queue_free()
 
 #lower speed by 5% for 1 kg
 	

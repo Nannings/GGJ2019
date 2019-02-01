@@ -14,13 +14,12 @@ var root
 var scene
 
 var level = 1
-var screen = 1
 var time = 1000 #2000
 
 var values = {
 	player = {
 		hp = 100,
-		speed = 8000,
+		speed = 9000,
 		happi = 0,
 		talking = false
 	},
@@ -28,29 +27,6 @@ var values = {
 		space = [],
 	}
 }
-
-func getWeightOfItem(name):
-	for item in ITEMS:
-		if item == name:
-#			print(ITEMS[item].slowdown)
-			return(ITEMS[item].slowdown)
-	return 0
-
-func countItems():
-	var count = 0;
-	for item in Global.values.inv.space:
-		if item != "empty":
-			count += 1
-	return count
-
-func calculateWeight():
-#	print(Global.values.inv)
-	var weight = 0;
-	var weightMultiplier = 25
-	for item in Global.values.inv.space:
-		if item != "empty":
-			weight += getWeightOfItem(item) * weightMultiplier
-	return weight
 
 func _ready():
 	root = get_tree().get_root()
@@ -85,3 +61,27 @@ func _deferred_gotoScene(path):
 	var res = ResourceLoader.load(path)
 	scene = res.instance()
 	root.add_child(scene)
+	
+
+func getWeightOfItem(name):
+	for item in ITEMS:
+		if item == name:
+#			print(ITEMS[item].slowdown)
+			return(ITEMS[item].slowdown)
+	return 0
+
+func countItems():
+	var count = 0;
+	for item in Global.values.inv.space:
+		if item != "empty":
+			count += 1
+	return count
+
+func calculateWeight():
+#	print(Global.values.inv)
+	var weight = 0;
+	var weightMultiplier = 25
+	for item in Global.values.inv.space:
+		if item != "empty":
+			weight += getWeightOfItem(item) * weightMultiplier
+	return weight

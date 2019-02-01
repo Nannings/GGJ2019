@@ -48,6 +48,7 @@ _sections_unfolded = [ "Mouse", "Size Flags", "Visibility" ]
 
 [node name="speakerPanel" type="Panel" parent="DialogueSystem" index="0"]
 
+editor/display_folded = true
 light_mask = 16
 anchor_left = 0.0
 anchor_top = 0.0
@@ -88,6 +89,7 @@ _sections_unfolded = [ "Visibility", "custom_fonts" ]
 
 [node name="panel" type="Panel" parent="DialogueSystem" index="1"]
 
+editor/display_folded = true
 light_mask = 16
 anchor_left = 0.0
 anchor_top = 0.0
@@ -178,6 +180,77 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="yesNo" type="VBoxContainer" parent="DialogueSystem" index="5"]
+
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -230.0
+margin_top = -320.0
+margin_right = -50.0
+margin_bottom = -204.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 1
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="yes" type="Button" parent="DialogueSystem/yesNo" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 180.0
+margin_bottom = 56.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "yes"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="no" type="Button" parent="DialogueSystem/yesNo" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 60.0
+margin_right = 180.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "no"
+flat = false
+align = 1
+_sections_unfolded = [ "Size Flags" ]
 
 [node name="Clock" parent="." index="1" instance=ExtResource( 4 )]
 

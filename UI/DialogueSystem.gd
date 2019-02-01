@@ -1,7 +1,5 @@
 extends Control
 
-signal choiceEvent(title)
-
 #onready var choice = preload("res://scenes/objects/choicesbox.tscn")
 onready var speakerLabel = $speakerPanel.get_node("speaker")
 onready var timeBetweenLetters = get_node("timeBetweenLetters")
@@ -9,6 +7,7 @@ onready var talklF = get_node("talklessFrames")
 onready var rtl = $panel.get_node("rtl")
 onready var audio = get_node("AudioStreamPlayer2D")
 onready var portret = $panel.get_node("portret")
+onready var yesNo = $yesNo
 
 var speaker = []
 var dialogue = []
@@ -25,18 +24,19 @@ var shake_amount = 0
 
 func _ready():
 	self.visible = false
-	pass
+	
 
-func show(var diaName):
-	$speakerPanel.visible = true	
-	portret.visible = true		
+func show(diaName):
+	$speakerPanel.visible = true
+	portret.visible = true
+
 	getDialogue(diaName)
 	if dialogue.size() <= 0:
 		print("dialgue NOT found")
-		return	
+		return
 	showDialogue()
 
-func showItem(var itemName):
+func showItem(itemName):
 	$speakerPanel.visible = false
 	portret.visible = false	
 	for key in Global.ITEMS:
@@ -45,7 +45,7 @@ func showItem(var itemName):
 	showDialogue()
 	pass
 
-func getDialogue(var sceneScript):
+func getDialogue(sceneScript):
 	for key in Global.TALKS:
 		if key == sceneScript:
 			for sent in Global.TALKS[key]:
@@ -55,6 +55,17 @@ func getDialogue(var sceneScript):
 #				voices.append(Global.TALKS[key][sent].voice)
 	print(speaker)
 	print(dialogue)
+	
+func showDialogue():
+	rtl.set_bbcode(dialogue[page])
+	rtl.set_visible_characters(0)
+	if speaker != []:
+		speakerLabel.set_text(speaker[page]) #possible error invalid get index 3 on base Array
+	if portrets != []:
+		portret.texture = load("res://UI/portret/" + portrets[page] + ".png")
+	beginPage = true
+	self.visible = true	
+	timeBetweenLetters.start()
 
 func _input(e):
 	event = e
@@ -92,16 +103,7 @@ func  _process(delta):
 #	    ))
 #		shake_amount -= delta
 
-func showDialogue():
-	rtl.set_bbcode(dialogue[page])
-	rtl.set_visible_characters(0)
-	if speaker != []:
-		speakerLabel.set_text(speaker[page])
-	if portrets != []:
-		portret.texture = load("res://UI/portret/" + portrets[page] + ".png")
-	beginPage = true
-	self.visible = true	
-	timeBetweenLetters.start()
+
 
 func reset():
 	speaker = []
@@ -117,7 +119,6 @@ func play_voice(name):
 	if file.file_exists(path):
 		audio.stream = load(path)
 		audio.play()
-		pass
 
 func _on_talklessFrames_timeout():
 	Global.values.player.talking = false
@@ -126,4 +127,3 @@ func _on_talklessFrames_timeout():
 
 func _on_timeBetweenLetters_timeout():
 	rtl.set_visible_characters(rtl.get_visible_characters() + 1)
-	pass # replace with function body
