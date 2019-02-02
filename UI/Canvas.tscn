@@ -1,15 +1,14 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/DialogueSystem.gd" type="Script" id=1]
-[ext_resource path="res://UI/Steelworks Vintage Demo.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/HelvetiPixel.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/portret/none.png" type="Texture" id=3]
 [ext_resource path="res://UI/InventorySystem.gd" type="Script" id=4]
-[ext_resource path="res://UI/HelvetiPixel.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Clock.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 30
+size = 49
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
@@ -27,8 +26,8 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 size = 50
 use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 5 )
+use_filter = false
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=4]
@@ -36,7 +35,15 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 50
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 5 )
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 50
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Canvas" type="CanvasLayer"]
@@ -50,7 +57,6 @@ _sections_unfolded = [ "Anchor", "Margin", "Pause" ]
 
 [node name="DialogueSystem" type="Control" parent="." index="0"]
 
-editor/display_folded = true
 light_mask = 16
 anchor_left = 0.0
 anchor_top = 1.0
@@ -162,17 +168,17 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "dsdasdsadasdsa"
+bbcode_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non quam sollicitudin, tempus lorem sit amet, bibendum turpis. Maecenas eu sapien porttitor, aliquam risus a, luctus nisi. Nulla ac maximus mauris. Quisque suscipit ex id velit ultrices, vel rhoncus dui sagittis. Nullam et pulvinar magna, gravida sodales ex. Suspendisse mattis purus quis commodo efficitur. Ut viverra tempus dolor sed tempus. Suspendisse condimentum et risus ut tristique. Aenean elementum mi sed diam faucibus, quis blandit leo laoreet. Aenean pretium erat purus, eu facilisis elit ultricies vel. Cras elementum tempus metus a feugiat. Vivamus nec sollicitudin lacus."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "dsdasdsadasdsa"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non quam sollicitudin, tempus lorem sit amet, bibendum turpis. Maecenas eu sapien porttitor, aliquam risus a, luctus nisi. Nulla ac maximus mauris. Quisque suscipit ex id velit ultrices, vel rhoncus dui sagittis. Nullam et pulvinar magna, gravida sodales ex. Suspendisse mattis purus quis commodo efficitur. Ut viverra tempus dolor sed tempus. Suspendisse condimentum et risus ut tristique. Aenean elementum mi sed diam faucibus, quis blandit leo laoreet. Aenean pretium erat purus, eu facilisis elit ultricies vel. Cras elementum tempus metus a feugiat. Vivamus nec sollicitudin lacus."
 scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Material", "Visibility" ]
+_sections_unfolded = [ "BBCode", "Material", "Visibility", "custom_fonts" ]
 
 [node name="timeBetweenLetters" type="Timer" parent="DialogueSystem" index="2"]
 
@@ -238,6 +244,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -264,6 +271,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -275,6 +283,7 @@ _sections_unfolded = [ "Size Flags" ]
 
 [node name="InventorySystem" type="Control" parent="." index="1"]
 
+visible = false
 light_mask = 16
 anchor_left = 0.0
 anchor_top = 0.0
@@ -320,7 +329,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 items = [  ]
 select_mode = 0
 allow_reselect = false
@@ -346,7 +355,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -374,7 +383,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -384,7 +393,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Clock" parent="." index="2" instance=ExtResource( 6 )]
+[node name="Clock" parent="." index="2" instance=ExtResource( 5 )]
 
 light_mask = 16
 margin_right = -883.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameOver.gd" type="Script" id=1]
-[ext_resource path="res://UI/Steelworks Vintage Demo.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/HelvetiPixel.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -40,6 +40,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "Theme" ]
 
 [node name="Label" type="Label" parent="." index="0"]
 
@@ -47,10 +48,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 55.0
-margin_top = 35.0
-margin_right = 1005.0
-margin_bottom = 169.0
+margin_left = 186.0
+margin_top = 27.0
+margin_right = 1091.0
+margin_bottom = 96.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -64,34 +65,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="CenterContainer" type="CenterContainer" parent="." index="1"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 5.0
-margin_right = 5.0
-margin_bottom = -139.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-
-[node name="Button" type="Button" parent="." index="2"]
+[node name="Button" type="Button" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 274.0
-margin_top = 628.0
-margin_right = 755.0
-margin_bottom = 788.0
+margin_left = 533.0
+margin_top = 620.0
+margin_right = 730.0
+margin_bottom = 695.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -109,27 +92,16 @@ flat = true
 align = 1
 _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
-
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
-
-[node name="endStory" type="RichTextLabel" parent="." index="4"]
+[node name="endStory" type="RichTextLabel" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 18.0
-margin_top = 188.0
-margin_right = 1039.0
-margin_bottom = 652.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 58.0
+margin_top = 130.0
+margin_right = -42.0
+margin_bottom = -99.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -144,7 +116,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "here comes and story"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non quam sollicitudin, tempus lorem sit amet, bibendum turpis. Maecenas eu sapien porttitor, aliquam risus a, luctus nisi. Nulla ac maximus mauris. Quisque suscipit ex id velit ultrices, vel rhoncus dui sagittis. Nullam et pulvinar magna, gravida sodales ex. Suspendisse mattis purus quis commodo efficitur. Ut viverra tempus dolor sed tempus. Suspendisse condimentum et risus ut tristique. Aenean elementum mi sed diam faucibus, quis blandit leo laoreet. Aenean pretium erat purus, eu facilisis elit ultricies vel. Cras elementum tempus metus a feugiat. Vivamus nec sollicitudin lacus."
 scroll_active = true
 scroll_following = false
 selection_enabled = false
